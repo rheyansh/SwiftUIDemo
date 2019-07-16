@@ -37,7 +37,7 @@ struct MenuListView : View {
         
         return NavigationView {
             List(items) { item in
-                NavigationButton(destination: MenuDetailView(item: item)) {
+                NavigationLink(destination: MenuDetailView(item: item)) {
                     MenuRow(item: item)
                 }
                 }.navigationBarTitle(Text("Menu"))

@@ -12,7 +12,7 @@ struct TutorRowView : View {
     let tutor: Tutor
     
     var body: some View {
-        return NavigationButton(destination: TutorDetailView(name: tutor.name, headline: tutor.headline, bio: tutor.bio)) {
+        return NavigationLink(destination: TutorDetailView(name: tutor.name, headline: tutor.headline, bio: tutor.bio)) {
             Image(tutor.imageName)
                 .cornerRadius(40)
             VStack(alignment: .leading) {

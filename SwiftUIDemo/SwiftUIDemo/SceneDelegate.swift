@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  SwiftUIDemo
 //
-//  Created by raj.sharma on 08/07/19.
+//  Created by raj.sharma on 16/07/19.
 //  Copyright © 2019 raj.sharma. All rights reserved.
 //
 
@@ -20,18 +20,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Use a UIHostingController as window root view controller
-        
-        
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        
-        let store = ReposStore(service: .init())
-        window.rootViewController = UIHostingController(
-            rootView: SearchRepoView().environmentObject(store)
-        )
-        
-        //window.rootViewController = UIHostingController(rootView: MenuListView())
-        self.window = window
-        window.makeKeyAndVisible()
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            
+//            let store = ReposStore(service: .init())
+//            window.rootViewController = UIHostingController(
+//                rootView: SearchRepoView().environmentObject(store)
+//            )
+            
+            let store = SettingsStore()
+            window.rootViewController = UIHostingController(rootView: SettingsView().environmentObject(store))
+
+            
+//            window.rootViewController = UIHostingController(rootView: MenuListView())
+            self.window = window
+            window.makeKeyAndVisible()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
