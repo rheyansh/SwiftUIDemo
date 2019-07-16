@@ -33,7 +33,7 @@ struct SearchRepoView : View {
 #if DEBUG
 struct SearchRepoView_Previews : PreviewProvider {
     static var previews: some View {
-        SearchRepoView()
+        SearchRepoView().environmentObject(ReposStore(service: .init()))
     }
 }
 #endif
