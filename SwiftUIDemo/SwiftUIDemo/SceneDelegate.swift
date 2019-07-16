@@ -20,8 +20,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Use a UIHostingController as window root view controller
+        
+        
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = UIHostingController(rootView: MenuListView())
+        
+        let store = ReposStore(service: .init())
+        window.rootViewController = UIHostingController(
+            rootView: SearchRepoView().environmentObject(store)
+        )
+        
+        //window.rootViewController = UIHostingController(rootView: MenuListView())
         self.window = window
         window.makeKeyAndVisible()
     }

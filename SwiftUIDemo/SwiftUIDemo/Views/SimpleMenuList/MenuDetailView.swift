@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct MenuDetailView : View {
+    
+    var item: MenuItem
+    
     var body: some View {
         VStack {
             /*MapView()
@@ -19,14 +22,14 @@ struct MenuDetailView : View {
              .padding(.bottom, -130)*/
             
             VStack(alignment: .leading) {
-                Text("Turtle Rock")
+                Text(item.title)
                     .font(.title)
                 
                 HStack(alignment: .top) {
-                    Text("Joshua Tree National Park")
+                    Text(item.subtitle)
                         .font(.subheadline)
                     Spacer()
-                    Text("California")
+                    Text(item.title)
                         .font(.subheadline)
                 }
                 }
@@ -40,7 +43,7 @@ struct MenuDetailView : View {
 #if DEBUG
 struct MenuDetailView_Previews : PreviewProvider {
     static var previews: some View {
-        MenuDetailView()
+        MenuDetailView(item: MenuItem(id: "1", title: "Item 2", subtitle: "Joshua Tree National Park"))
     }
 }
 #endif
