@@ -28,11 +28,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //                rootView: SearchRepoView().environmentObject(store)
 //            )
             
-            let store = SettingsStore()
-            window.rootViewController = UIHostingController(rootView: SettingsView().environmentObject(store))
+//            let store = SettingsStore()
+//            window.rootViewController = UIHostingController(rootView: SettingsView().environmentObject(store))
 
+           window.rootViewController = UIHostingController(rootView: FoodList())
             
-//            window.rootViewController = UIHostingController(rootView: MenuListView())
+            //window.rootViewController = UIHostingController(rootView: MenuListView())
+            
             self.window = window
             window.makeKeyAndVisible()
         }
