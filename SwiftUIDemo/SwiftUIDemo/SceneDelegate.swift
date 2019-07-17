@@ -31,8 +31,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //            let store = SettingsStore()
 //            window.rootViewController = UIHostingController(rootView: SettingsView().environmentObject(store))
 
-           window.rootViewController = UIHostingController(rootView: FoodList())
+           //window.rootViewController = UIHostingController(rootView: FoodList())
             
+            window.rootViewController = UIHostingController(rootView: RepositoryListView(viewModel: .init()))
+
             //window.rootViewController = UIHostingController(rootView: MenuListView())
             
             self.window = window

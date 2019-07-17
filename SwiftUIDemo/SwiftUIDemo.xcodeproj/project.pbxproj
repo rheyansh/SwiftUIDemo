@@ -44,6 +44,21 @@
 		11FCDCF722DEE9C40013FDB9 /* FoodDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDCF622DEE9C40013FDB9 /* FoodDetailRow.swift */; };
 		11FCDCF922DEEAAD0013FDB9 /* FoodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDCF822DEEAAD0013FDB9 /* FoodDetailView.swift */; };
 		11FCDCFB22DEEB040013FDB9 /* FoodHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDCFA22DEEB040013FDB9 /* FoodHelper.swift */; };
+		11FCDD0122DF22AA0013FDB9 /* SearchRepositoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD0022DF22AA0013FDB9 /* SearchRepositoryResponse.swift */; };
+		11FCDD0322DF22C10013FDB9 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD0222DF22C10013FDB9 /* Repository.swift */; };
+		11FCDD0522DF22D40013FDB9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD0422DF22D40013FDB9 /* User.swift */; };
+		11FCDD0722DF22F20013FDB9 /* AnySubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD0622DF22F20013FDB9 /* AnySubscription.swift */; };
+		11FCDD0922DF23DC0013FDB9 /* UnidirectionalDataFlowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD0822DF23DC0013FDB9 /* UnidirectionalDataFlowType.swift */; };
+		11FCDD0B22DF243C0013FDB9 /* RepositoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD0A22DF243C0013FDB9 /* RepositoryDetailViewModel.swift */; };
+		11FCDD0D22DF24EA0013FDB9 /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD0C22DF24EA0013FDB9 /* RepositoryListViewModel.swift */; };
+		11FCDD1022DF25590013FDB9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD0F22DF25590013FDB9 /* APIService.swift */; };
+		11FCDD1222DF25870013FDB9 /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD1122DF25870013FDB9 /* APIServiceError.swift */; };
+		11FCDD1422DF259C0013FDB9 /* TrackerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD1322DF259C0013FDB9 /* TrackerService.swift */; };
+		11FCDD1622DF25B40013FDB9 /* SearchRepositoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD1522DF25B40013FDB9 /* SearchRepositoryRequest.swift */; };
+		11FCDD1822DF25C60013FDB9 /* ExperimentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD1722DF25C60013FDB9 /* ExperimentService.swift */; };
+		11FCDD1A22DF26050013FDB9 /* RepositoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD1922DF26050013FDB9 /* RepositoryListView.swift */; };
+		11FCDD1C22DF26220013FDB9 /* RepositoryListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD1B22DF26220013FDB9 /* RepositoryListRow.swift */; };
+		11FCDD1E22DF26340013FDB9 /* RepositoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD1D22DF26340013FDB9 /* RepositoryDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +113,21 @@
 		11FCDCF622DEE9C40013FDB9 /* FoodDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailRow.swift; sourceTree = "<group>"; };
 		11FCDCF822DEEAAD0013FDB9 /* FoodDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailView.swift; sourceTree = "<group>"; };
 		11FCDCFA22DEEB040013FDB9 /* FoodHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHelper.swift; sourceTree = "<group>"; };
+		11FCDD0022DF22AA0013FDB9 /* SearchRepositoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryResponse.swift; sourceTree = "<group>"; };
+		11FCDD0222DF22C10013FDB9 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		11FCDD0422DF22D40013FDB9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		11FCDD0622DF22F20013FDB9 /* AnySubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnySubscription.swift; sourceTree = "<group>"; };
+		11FCDD0822DF23DC0013FDB9 /* UnidirectionalDataFlowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnidirectionalDataFlowType.swift; sourceTree = "<group>"; };
+		11FCDD0A22DF243C0013FDB9 /* RepositoryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewModel.swift; sourceTree = "<group>"; };
+		11FCDD0C22DF24EA0013FDB9 /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
+		11FCDD0F22DF25590013FDB9 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		11FCDD1122DF25870013FDB9 /* APIServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
+		11FCDD1322DF259C0013FDB9 /* TrackerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerService.swift; sourceTree = "<group>"; };
+		11FCDD1522DF25B40013FDB9 /* SearchRepositoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryRequest.swift; sourceTree = "<group>"; };
+		11FCDD1722DF25C60013FDB9 /* ExperimentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentService.swift; sourceTree = "<group>"; };
+		11FCDD1922DF26050013FDB9 /* RepositoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListView.swift; sourceTree = "<group>"; };
+		11FCDD1B22DF26220013FDB9 /* RepositoryListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListRow.swift; sourceTree = "<group>"; };
+		11FCDD1D22DF26340013FDB9 /* RepositoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +151,7 @@
 		112F2F3522DDF30100075244 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				11FCDCFC22DF225C0013FDB9 /* MVVMDemo */,
 				11EA161E22DE043500C799D2 /* List2Demo */,
 				112F2F6F22DDF71300075244 /* LoginDemo */,
 				112F2F3622DDF30100075244 /* FormExample */,
@@ -285,6 +316,60 @@
 			path = List2Demo;
 			sourceTree = "<group>";
 		};
+		11FCDCFC22DF225C0013FDB9 /* MVVMDemo */ = {
+			isa = PBXGroup;
+			children = (
+				11FCDD0E22DF25410013FDB9 /* Services */,
+				11FCDCFF22DF22880013FDB9 /* Views */,
+				11FCDCFE22DF227B0013FDB9 /* ViewModels */,
+				11FCDCFD22DF22710013FDB9 /* Models */,
+			);
+			path = MVVMDemo;
+			sourceTree = "<group>";
+		};
+		11FCDCFD22DF22710013FDB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				11FCDD0022DF22AA0013FDB9 /* SearchRepositoryResponse.swift */,
+				11FCDD0222DF22C10013FDB9 /* Repository.swift */,
+				11FCDD0422DF22D40013FDB9 /* User.swift */,
+				11FCDD0622DF22F20013FDB9 /* AnySubscription.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		11FCDCFE22DF227B0013FDB9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				11FCDD0822DF23DC0013FDB9 /* UnidirectionalDataFlowType.swift */,
+				11FCDD0A22DF243C0013FDB9 /* RepositoryDetailViewModel.swift */,
+				11FCDD0C22DF24EA0013FDB9 /* RepositoryListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		11FCDCFF22DF22880013FDB9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				11FCDD1922DF26050013FDB9 /* RepositoryListView.swift */,
+				11FCDD1B22DF26220013FDB9 /* RepositoryListRow.swift */,
+				11FCDD1D22DF26340013FDB9 /* RepositoryDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		11FCDD0E22DF25410013FDB9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				11FCDD0F22DF25590013FDB9 /* APIService.swift */,
+				11FCDD1122DF25870013FDB9 /* APIServiceError.swift */,
+				11FCDD1322DF259C0013FDB9 /* TrackerService.swift */,
+				11FCDD1522DF25B40013FDB9 /* SearchRepositoryRequest.swift */,
+				11FCDD1722DF25C60013FDB9 /* ExperimentService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -393,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11FCDD1022DF25590013FDB9 /* APIService.swift in Sources */,
 				112F2F6C22DDF30100075244 /* MenuItem.swift in Sources */,
 				112F2F6B22DDF30100075244 /* Tutor.swift in Sources */,
 				112F2F5D22DDF30100075244 /* RepoRow.swift in Sources */,
@@ -400,23 +486,37 @@
 				11FCDCF922DEEAAD0013FDB9 /* FoodDetailView.swift in Sources */,
 				11FCDCFB22DEEB040013FDB9 /* FoodHelper.swift in Sources */,
 				112F2F6222DDF30100075244 /* TutorRowView.swift in Sources */,
+				11FCDD0322DF22C10013FDB9 /* Repository.swift in Sources */,
+				11FCDD0522DF22D40013FDB9 /* User.swift in Sources */,
 				112F2F6522DDF30100075244 /* SettingsView.swift in Sources */,
 				112F2F6322DDF30100075244 /* TutorListView.swift in Sources */,
 				112F2F5722DDF30100075244 /* FormView.swift in Sources */,
 				112F2F5A22DDF30100075244 /* MenuRow.swift in Sources */,
+				11FCDD1C22DF26220013FDB9 /* RepositoryListRow.swift in Sources */,
+				11FCDD0722DF22F20013FDB9 /* AnySubscription.swift in Sources */,
 				112F2F6422DDF30100075244 /* TutorDetailView.swift in Sources */,
+				11FCDD1222DF25870013FDB9 /* APIServiceError.swift in Sources */,
+				11FCDD0922DF23DC0013FDB9 /* UnidirectionalDataFlowType.swift in Sources */,
 				112F2F5E22DDF30100075244 /* SearchRepoView.swift in Sources */,
 				112F2F5B22DDF30100075244 /* MenuDetailView.swift in Sources */,
 				112F2F6022DDF30100075244 /* ServiceHelper.swift in Sources */,
+				11FCDD1A22DF26050013FDB9 /* RepositoryListView.swift in Sources */,
 				112F2F6622DDF30100075244 /* SettingsStore.swift in Sources */,
 				112F2F6122DDF30100075244 /* Repo.swift in Sources */,
 				112F2F7122DDF73900075244 /* LoginView.swift in Sources */,
+				11FCDD1E22DF26340013FDB9 /* RepositoryDetailView.swift in Sources */,
+				11FCDD1422DF259C0013FDB9 /* TrackerService.swift in Sources */,
 				1138257922DDF2AA0014B691 /* AppDelegate.swift in Sources */,
 				11FCDCF722DEE9C40013FDB9 /* FoodDetailRow.swift in Sources */,
 				11EA162022DE044B00C799D2 /* FoodList.swift in Sources */,
+				11FCDD1822DF25C60013FDB9 /* ExperimentService.swift in Sources */,
+				11FCDD0B22DF243C0013FDB9 /* RepositoryDetailViewModel.swift in Sources */,
 				1138257B22DDF2AA0014B691 /* SceneDelegate.swift in Sources */,
+				11FCDD0D22DF24EA0013FDB9 /* RepositoryListViewModel.swift in Sources */,
 				11FCDCF522DEE9230013FDB9 /* Food.swift in Sources */,
 				112F2F5922DDF30100075244 /* MenuListView.swift in Sources */,
+				11FCDD1622DF25B40013FDB9 /* SearchRepositoryRequest.swift in Sources */,
+				11FCDD0122DF22AA0013FDB9 /* SearchRepositoryResponse.swift in Sources */,
 				112F2F5F22DDF30100075244 /* ReposStore.swift in Sources */,
 				112F2F5822DDF30100075244 /* FormRow.swift in Sources */,
 			);
