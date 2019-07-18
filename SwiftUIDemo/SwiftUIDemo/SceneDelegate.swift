@@ -35,7 +35,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             //window.rootViewController = UIHostingController(rootView: RepositoryListView(viewModel: .init()))
 
-            window.rootViewController = UIHostingController(rootView: DataStackView(deals: Deal.previewContent))
+            //window.rootViewController = UIHostingController(rootView: DataStackView(deals: Deal.previewContent))
+            
+            window.rootViewController = UIHostingController(rootView: ImagelistView())
 
             //window.rootViewController = UIHostingController(rootView: SearchBookView())
 

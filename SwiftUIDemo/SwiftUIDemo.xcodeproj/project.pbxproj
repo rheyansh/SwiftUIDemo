@@ -33,6 +33,12 @@
 		112F2F6D22DDF30100075244 /* File.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 112F2F5522DDF30100075244 /* File.rtf */; };
 		112F2F6E22DDF30100075244 /* Menu.json in Resources */ = {isa = PBXBuildFile; fileRef = 112F2F5622DDF30100075244 /* Menu.json */; };
 		112F2F7122DDF73900075244 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112F2F7022DDF73900075244 /* LoginView.swift */; };
+		11333F3A22E046BF00ABBCFE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11333F3922E046BF00ABBCFE /* NetworkManager.swift */; };
+		11333F3C22E046D400ABBCFE /* ImagelistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11333F3B22E046D400ABBCFE /* ImagelistView.swift */; };
+		11333F3E22E046E800ABBCFE /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11333F3D22E046E800ABBCFE /* Course.swift */; };
+		11333F4022E04B4D00ABBCFE /* CourseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11333F3F22E04B4D00ABBCFE /* CourseRow.swift */; };
+		11333F4222E0514F00ABBCFE /* ImageViewWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11333F4122E0514F00ABBCFE /* ImageViewWidget.swift */; };
+		11333F4422E0519900ABBCFE /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11333F4322E0519900ABBCFE /* ImageLoader.swift */; };
 		1138257922DDF2AA0014B691 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1138257822DDF2AA0014B691 /* AppDelegate.swift */; };
 		1138257B22DDF2AA0014B691 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1138257A22DDF2AA0014B691 /* SceneDelegate.swift */; };
 		1138257F22DDF2AC0014B691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1138257E22DDF2AC0014B691 /* Assets.xcassets */; };
@@ -110,6 +116,12 @@
 		112F2F5522DDF30100075244 /* File.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = File.rtf; sourceTree = "<group>"; };
 		112F2F5622DDF30100075244 /* Menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Menu.json; sourceTree = "<group>"; };
 		112F2F7022DDF73900075244 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		11333F3922E046BF00ABBCFE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		11333F3B22E046D400ABBCFE /* ImagelistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagelistView.swift; sourceTree = "<group>"; };
+		11333F3D22E046E800ABBCFE /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		11333F3F22E04B4D00ABBCFE /* CourseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRow.swift; sourceTree = "<group>"; };
+		11333F4122E0514F00ABBCFE /* ImageViewWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewWidget.swift; sourceTree = "<group>"; };
+		11333F4322E0519900ABBCFE /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		1138257522DDF2AA0014B691 /* SwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1138257822DDF2AA0014B691 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1138257A22DDF2AA0014B691 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +187,7 @@
 		112F2F3522DDF30100075244 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				11333F3822E046A100ABBCFE /* SimpleImageListyFetch */,
 				115CD1A122DF3CFC00791A86 /* DealStack */,
 				115C17C822DF39DE00262980 /* BookSearch */,
 				11FCDCFC22DF225C0013FDB9 /* MVVMDemo */,
@@ -276,6 +289,19 @@
 				112F2F7022DDF73900075244 /* LoginView.swift */,
 			);
 			path = LoginDemo;
+			sourceTree = "<group>";
+		};
+		11333F3822E046A100ABBCFE /* SimpleImageListyFetch */ = {
+			isa = PBXGroup;
+			children = (
+				11333F3922E046BF00ABBCFE /* NetworkManager.swift */,
+				11333F3B22E046D400ABBCFE /* ImagelistView.swift */,
+				11333F3D22E046E800ABBCFE /* Course.swift */,
+				11333F3F22E04B4D00ABBCFE /* CourseRow.swift */,
+				11333F4122E0514F00ABBCFE /* ImageViewWidget.swift */,
+				11333F4322E0519900ABBCFE /* ImageLoader.swift */,
+			);
+			path = SimpleImageListyFetch;
 			sourceTree = "<group>";
 		};
 		1138256C22DDF2AA0014B691 = {
@@ -562,13 +588,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11333F3A22E046BF00ABBCFE /* NetworkManager.swift in Sources */,
+				11333F4022E04B4D00ABBCFE /* CourseRow.swift in Sources */,
 				11FCDD1022DF25590013FDB9 /* APIService.swift in Sources */,
 				115C17D522DF3ABD00262980 /* BookDetail.swift in Sources */,
 				112F2F6C22DDF30100075244 /* MenuItem.swift in Sources */,
 				115C17CB22DF39FF00262980 /* Book.swift in Sources */,
 				112F2F6B22DDF30100075244 /* Tutor.swift in Sources */,
 				115C17D722DF3AD700262980 /* SearchBookView.swift in Sources */,
+				11333F4222E0514F00ABBCFE /* ImageViewWidget.swift in Sources */,
 				112F2F5D22DDF30100075244 /* RepoRow.swift in Sources */,
+				11333F3E22E046E800ABBCFE /* Course.swift in Sources */,
 				112F2F5C22DDF30100075244 /* LandingView.swift in Sources */,
 				11FCDCF922DEEAAD0013FDB9 /* FoodDetailView.swift in Sources */,
 				11FCDCFB22DEEB040013FDB9 /* FoodHelper.swift in Sources */,
@@ -577,7 +607,9 @@
 				11FCDD0522DF22D40013FDB9 /* User.swift in Sources */,
 				112F2F6522DDF30100075244 /* SettingsView.swift in Sources */,
 				115C17CD22DF3A3A00262980 /* BookDisplayData.swift in Sources */,
+				11333F3C22E046D400ABBCFE /* ImagelistView.swift in Sources */,
 				112F2F6322DDF30100075244 /* TutorListView.swift in Sources */,
+				11333F4422E0519900ABBCFE /* ImageLoader.swift in Sources */,
 				112F2F5722DDF30100075244 /* FormView.swift in Sources */,
 				112F2F5A22DDF30100075244 /* MenuRow.swift in Sources */,
 				11FCDD1C22DF26220013FDB9 /* RepositoryListRow.swift in Sources */,
