@@ -84,6 +84,12 @@
 		68DF42C02842360E00FEB792 /* BulkDeleteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF42BF2842360E00FEB792 /* BulkDeleteListView.swift */; };
 		68DF42C22842362200FEB792 /* SwipeDeleteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF42C12842362200FEB792 /* SwipeDeleteListView.swift */; };
 		68DF42C428424BE000FEB792 /* SearchRepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF42C328424BE000FEB792 /* SearchRepoViewModel.swift */; };
+		68DF42C7284295A300FEB792 /* ListWithLazyVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF42C6284295A300FEB792 /* ListWithLazyVGrid.swift */; };
+		68DF43162842968400FEB792 /* CoffeeImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68DF43152842968400FEB792 /* CoffeeImages.xcassets */; };
+		68DF431A284298DD00FEB792 /* GridList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF4319284298DD00FEB792 /* GridList.swift */; };
+		68DF431C2842990A00FEB792 /* GridListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF431B2842990A00FEB792 /* GridListItem.swift */; };
+		68DF432028429F1800FEB792 /* ComplexGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF431F28429F1800FEB792 /* ComplexGridView.swift */; };
+		68DF432228429FE700FEB792 /* ComplexGridView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF432128429FE700FEB792 /* ComplexGridView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +184,12 @@
 		68DF42BF2842360E00FEB792 /* BulkDeleteListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulkDeleteListView.swift; sourceTree = "<group>"; };
 		68DF42C12842362200FEB792 /* SwipeDeleteListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeDeleteListView.swift; sourceTree = "<group>"; };
 		68DF42C328424BE000FEB792 /* SearchRepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepoViewModel.swift; sourceTree = "<group>"; };
+		68DF42C6284295A300FEB792 /* ListWithLazyVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWithLazyVGrid.swift; sourceTree = "<group>"; };
+		68DF43152842968400FEB792 /* CoffeeImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CoffeeImages.xcassets; sourceTree = "<group>"; };
+		68DF4319284298DD00FEB792 /* GridList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridList.swift; sourceTree = "<group>"; };
+		68DF431B2842990A00FEB792 /* GridListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridListItem.swift; sourceTree = "<group>"; };
+		68DF431F28429F1800FEB792 /* ComplexGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexGridView.swift; sourceTree = "<group>"; };
+		68DF432128429FE700FEB792 /* ComplexGridView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexGridView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +213,7 @@
 		112F2F3522DDF30100075244 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				68DF42C5284294CB00FEB792 /* Grid */,
 				68AFC8EC2841E40100D3C03C /* DemoList */,
 				68AFC8E92841E0C100D3C03C /* Profile */,
 				68AFC8E62841D6DB00D3C03C /* TabBar */,
@@ -350,6 +363,7 @@
 				1138257A22DDF2AA0014B691 /* SceneDelegate.swift */,
 				1138257E22DDF2AC0014B691 /* Assets.xcassets */,
 				112F2F3322DDF2F000075244 /* Tutor.xcassets */,
+				68DF43152842968400FEB792 /* CoffeeImages.xcassets */,
 				1138258322DDF2AC0014B691 /* LaunchScreen.storyboard */,
 				1138258622DDF2AC0014B691 /* Info.plist */,
 				1138258022DDF2AC0014B691 /* Preview Content */,
@@ -525,6 +539,18 @@
 			path = DemoList;
 			sourceTree = "<group>";
 		};
+		68DF42C5284294CB00FEB792 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				68DF42C6284295A300FEB792 /* ListWithLazyVGrid.swift */,
+				68DF4319284298DD00FEB792 /* GridList.swift */,
+				68DF431B2842990A00FEB792 /* GridListItem.swift */,
+				68DF431F28429F1800FEB792 /* ComplexGridView.swift */,
+				68DF432128429FE700FEB792 /* ComplexGridView2.swift */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -612,6 +638,7 @@
 				112F2F6722DDF30100075244 /* p-4.jpg in Resources */,
 				1138258522DDF2AC0014B691 /* LaunchScreen.storyboard in Resources */,
 				1138258222DDF2AC0014B691 /* Preview Assets.xcassets in Resources */,
+				68DF43162842968400FEB792 /* CoffeeImages.xcassets in Resources */,
 				112F2F6A22DDF30100075244 /* p-2.jpg in Resources */,
 				112F2F6922DDF30100075244 /* p-3.jpg in Resources */,
 				1138257F22DDF2AC0014B691 /* Assets.xcassets in Resources */,
@@ -638,6 +665,7 @@
 				11FCDD1022DF25590013FDB9 /* APIService.swift in Sources */,
 				115C17D522DF3ABD00262980 /* BookDetail.swift in Sources */,
 				112F2F6C22DDF30100075244 /* MenuItem.swift in Sources */,
+				68DF431C2842990A00FEB792 /* GridListItem.swift in Sources */,
 				115C17CB22DF39FF00262980 /* Book.swift in Sources */,
 				112F2F6B22DDF30100075244 /* Tutor.swift in Sources */,
 				115C17D722DF3AD700262980 /* SearchBookView.swift in Sources */,
@@ -648,9 +676,12 @@
 				112F2F5C22DDF30100075244 /* LandingView.swift in Sources */,
 				11FCDCF922DEEAAD0013FDB9 /* FoodDetailView.swift in Sources */,
 				11FCDCFB22DEEB040013FDB9 /* FoodHelper.swift in Sources */,
+				68DF431A284298DD00FEB792 /* GridList.swift in Sources */,
 				112F2F6222DDF30100075244 /* TutorRowView.swift in Sources */,
 				11FCDD0322DF22C10013FDB9 /* Repository.swift in Sources */,
 				11FCDD0522DF22D40013FDB9 /* User.swift in Sources */,
+				68DF42C7284295A300FEB792 /* ListWithLazyVGrid.swift in Sources */,
+				68DF432028429F1800FEB792 /* ComplexGridView.swift in Sources */,
 				112F2F6522DDF30100075244 /* SettingsView.swift in Sources */,
 				115C17CD22DF3A3A00262980 /* BookDisplayData.swift in Sources */,
 				11333F3C22E046D400ABBCFE /* ImagelistView.swift in Sources */,
@@ -672,6 +703,7 @@
 				112F2F5B22DDF30100075244 /* MenuDetailView.swift in Sources */,
 				112F2F6022DDF30100075244 /* ServiceHelper.swift in Sources */,
 				11FCDD1A22DF26050013FDB9 /* RepositoryListView.swift in Sources */,
+				68DF432228429FE700FEB792 /* ComplexGridView2.swift in Sources */,
 				115C17D222DF3A9A00262980 /* FoundationExtensions.swift in Sources */,
 				112F2F6622DDF30100075244 /* SettingsStore.swift in Sources */,
 				115C17DE22DF3B2800262980 /* SearchBookCell.swift in Sources */,
