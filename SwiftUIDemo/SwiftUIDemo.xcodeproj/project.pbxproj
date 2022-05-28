@@ -77,6 +77,13 @@
 		11FCDD1A22DF26050013FDB9 /* RepositoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD1922DF26050013FDB9 /* RepositoryListView.swift */; };
 		11FCDD1C22DF26220013FDB9 /* RepositoryListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD1B22DF26220013FDB9 /* RepositoryListRow.swift */; };
 		11FCDD1E22DF26340013FDB9 /* RepositoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD1D22DF26340013FDB9 /* RepositoryDetailView.swift */; };
+		68AFC8E82841D6DB00D3C03C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFC8E72841D6DB00D3C03C /* TabBarView.swift */; };
+		68AFC8EB2841E0C100D3C03C /* MyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFC8EA2841E0C100D3C03C /* MyProfile.swift */; };
+		68AFC8EE2841E40100D3C03C /* DemoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFC8ED2841E40100D3C03C /* DemoListView.swift */; };
+		68AFC8F028420EEE00D3C03C /* ExpandCollapseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFC8EF28420EEE00D3C03C /* ExpandCollapseView.swift */; };
+		68AFC8F2284212D000D3C03C /* BulkDeleteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFC8F1284212D000D3C03C /* BulkDeleteListView.swift */; };
+		68AFC8F42842154700D3C03C /* GroupedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFC8F32842154700D3C03C /* GroupedListView.swift */; };
+		68AFC8F6284215D600D3C03C /* SwipeDeleteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFC8F5284215D600D3C03C /* SwipeDeleteListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +171,13 @@
 		11FCDD1922DF26050013FDB9 /* RepositoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListView.swift; sourceTree = "<group>"; };
 		11FCDD1B22DF26220013FDB9 /* RepositoryListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListRow.swift; sourceTree = "<group>"; };
 		11FCDD1D22DF26340013FDB9 /* RepositoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailView.swift; sourceTree = "<group>"; };
+		68AFC8E72841D6DB00D3C03C /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		68AFC8EA2841E0C100D3C03C /* MyProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfile.swift; sourceTree = "<group>"; };
+		68AFC8ED2841E40100D3C03C /* DemoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoListView.swift; sourceTree = "<group>"; };
+		68AFC8EF28420EEE00D3C03C /* ExpandCollapseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandCollapseView.swift; sourceTree = "<group>"; };
+		68AFC8F1284212D000D3C03C /* BulkDeleteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulkDeleteListView.swift; sourceTree = "<group>"; };
+		68AFC8F32842154700D3C03C /* GroupedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedListView.swift; sourceTree = "<group>"; };
+		68AFC8F5284215D600D3C03C /* SwipeDeleteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDeleteListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +201,9 @@
 		112F2F3522DDF30100075244 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				68AFC8EC2841E40100D3C03C /* DemoList */,
+				68AFC8E92841E0C100D3C03C /* Profile */,
+				68AFC8E62841D6DB00D3C03C /* TabBar */,
 				11333F3822E046A100ABBCFE /* SimpleImageListyFetch */,
 				115CD1A122DF3CFC00791A86 /* DealStack */,
 				115C17C822DF39DE00262980 /* BookSearch */,
@@ -480,6 +497,34 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		68AFC8E62841D6DB00D3C03C /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				68AFC8E72841D6DB00D3C03C /* TabBarView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		68AFC8E92841E0C100D3C03C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				68AFC8EA2841E0C100D3C03C /* MyProfile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		68AFC8EC2841E40100D3C03C /* DemoList */ = {
+			isa = PBXGroup;
+			children = (
+				68AFC8ED2841E40100D3C03C /* DemoListView.swift */,
+				68AFC8EF28420EEE00D3C03C /* ExpandCollapseView.swift */,
+				68AFC8F1284212D000D3C03C /* BulkDeleteListView.swift */,
+				68AFC8F32842154700D3C03C /* GroupedListView.swift */,
+				68AFC8F5284215D600D3C03C /* SwipeDeleteListView.swift */,
+			);
+			path = DemoList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -610,12 +655,16 @@
 				11333F3C22E046D400ABBCFE /* ImagelistView.swift in Sources */,
 				112F2F6322DDF30100075244 /* TutorListView.swift in Sources */,
 				11333F4422E0519900ABBCFE /* ImageLoader.swift in Sources */,
+				68AFC8F42842154700D3C03C /* GroupedListView.swift in Sources */,
+				68AFC8EE2841E40100D3C03C /* DemoListView.swift in Sources */,
 				112F2F5722DDF30100075244 /* FormView.swift in Sources */,
 				112F2F5A22DDF30100075244 /* MenuRow.swift in Sources */,
 				11FCDD1C22DF26220013FDB9 /* RepositoryListRow.swift in Sources */,
 				11FCDD0722DF22F20013FDB9 /* AnySubscription.swift in Sources */,
 				115CD1A522DF3D1000791A86 /* PriceView.swift in Sources */,
 				112F2F6422DDF30100075244 /* TutorDetailView.swift in Sources */,
+				68AFC8F2284212D000D3C03C /* BulkDeleteListView.swift in Sources */,
+				68AFC8F028420EEE00D3C03C /* ExpandCollapseView.swift in Sources */,
 				11FCDD1222DF25870013FDB9 /* APIServiceError.swift in Sources */,
 				11FCDD0922DF23DC0013FDB9 /* UnidirectionalDataFlowType.swift in Sources */,
 				115C17D022DF3A7C00262980 /* BookAPIService.swift in Sources */,
@@ -638,14 +687,17 @@
 				11FCDD1822DF25C60013FDB9 /* ExperimentService.swift in Sources */,
 				11FCDD0B22DF243C0013FDB9 /* RepositoryDetailViewModel.swift in Sources */,
 				1138257B22DDF2AA0014B691 /* SceneDelegate.swift in Sources */,
+				68AFC8F6284215D600D3C03C /* SwipeDeleteListView.swift in Sources */,
 				11FCDD0D22DF24EA0013FDB9 /* RepositoryListViewModel.swift in Sources */,
 				11FCDCF522DEE9230013FDB9 /* Food.swift in Sources */,
 				112F2F5922DDF30100075244 /* MenuListView.swift in Sources */,
 				11FCDD1622DF25B40013FDB9 /* SearchRepositoryRequest.swift in Sources */,
 				11FCDD0122DF22AA0013FDB9 /* SearchRepositoryResponse.swift in Sources */,
+				68AFC8EB2841E0C100D3C03C /* MyProfile.swift in Sources */,
 				112F2F5F22DDF30100075244 /* ReposStore.swift in Sources */,
 				112F2F5822DDF30100075244 /* FormRow.swift in Sources */,
 				115C17DC22DF3B1500262980 /* SearchBookBar.swift in Sources */,
+				68AFC8E82841D6DB00D3C03C /* TabBarView.swift in Sources */,
 				115CD1A422DF3D1000791A86 /* DealView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -802,6 +854,7 @@
 				DEVELOPMENT_ASSET_PATHS = "SwiftUIDemo/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUIDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -821,6 +874,7 @@
 				DEVELOPMENT_ASSET_PATHS = "SwiftUIDemo/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUIDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

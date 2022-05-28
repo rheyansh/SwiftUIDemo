@@ -8,10 +8,12 @@
 
 import SwiftUI
 
-let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
-let storedUsername = "zzzzzzzz"
-let storedPassword = "zzzzzzzz"
+let lightGrayColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
+let darkGrayColor = Color(red: 44.0/255.0, green: 44.0/255.0, blue: 44.0/255.0, opacity: 1.0)
+let primaryColor = Color(red: 51/255.0, green: 105/255.0, blue: 172/255.0, opacity: 1.0)
 
+let storedUsername = "bruce"
+let storedPassword = "11111111"
 
 struct LoginView : View {
     
@@ -26,9 +28,11 @@ struct LoginView : View {
         ZStack {
             VStack {
                 WelcomeText()
-                UserImage()
+                LogoImage()
                 UsernameTextField(username: $username, editingMode: $editingMode)
                 PasswordSecureField(password: $password, editingMode: $editingMode)
+                DemoCredentialText()
+
                 if authenticationDidFail {
                     Text("Information not correct. Try again.")
                         .offset(y: -10)
@@ -74,23 +78,32 @@ struct LoginView_Previews : PreviewProvider {
 
 struct WelcomeText: View {
     var body: some View {
-        return Text("Welcome!")
-            .font(.largeTitle)
-            .fontWeight(.semibold)
+        return Text("THINK")
+            .font(.custom("Avenir-Medium", size: 27))
+            .foregroundColor(darkGrayColor)
             .padding(.bottom, 20)
     }
 }
 
-struct UserImage: View {
+struct DemoCredentialText: View {
+    var body: some View {
+        return Text("Demo Credential: bruce/11111111")
+            .font(.custom("Avenir-Medium", size: 12))
+            .foregroundColor(darkGrayColor)
+            .padding(.bottom, 20)
+    }
+}
+
+struct LogoImage: View {
     var body: some View {
         return
-            Image("Sai Kambampati")
+            Image("ibm_logo")
             .resizable()
-            .aspectRatio(UIImage(named: "Sai Kambampati")!.size, contentMode: .fill)
-            .frame(width: 150, height: 150)
+            .aspectRatio(UIImage(named: "ibm_logo")!.size, contentMode: .fit)
+            .frame(width: 320, height: 80)
             .clipped()
-            .cornerRadius(150)
-            .padding(.bottom, 75)
+            //.cornerRadius(150)
+            .padding(.bottom, 60)
     }
 }
 
@@ -98,18 +111,25 @@ struct UsernameTextField : View {
     
     @Binding var username: String
     @Binding var editingMode: Bool
-
+    
+    
     var body: some View {
-        return TextField("Username", text: $username, onEditingChanged: {edit in
-            if edit == true
-            {self.editingMode = true}
-            else
-            {self.editingMode = false}
-        })
-            .padding()
-            .background(lightGreyColor)
-            .cornerRadius(5.0)
-            .padding(.bottom, 20)
+        return HStack {
+            Image(systemName: "person")
+                .foregroundColor(.secondary)
+            TextField("Username", text: $username, onEditingChanged: {edit in
+                if edit == true
+                {self.editingMode = true}
+                else
+                {self.editingMode = false}
+            }).autocapitalization(.none)
+        }
+        .padding()
+        .background(lightGrayColor)
+        .cornerRadius(5.0)
+        .padding(.bottom, 20)
+        .padding(.leading, 20)
+        .padding(.trailing, 20)
     }
 }
 
@@ -117,13 +137,24 @@ struct PasswordSecureField : View {
     
     @Binding var password: String
     @Binding var editingMode: Bool
-
+    
     var body: some View {
-        return SecureField("Password", text: $password)
-            .padding()
-            .background(lightGreyColor)
-            .cornerRadius(5.0)
-            .padding(.bottom, 20)
+        return HStack {
+            Image("icons8-key-50")
+                .resizable()
+                .frame(width: 16.0, height: 16.0)
+                .foregroundColor(lightGrayColor)
+            SecureField("Password", text: $password)
+                .foregroundColor(Color.black)
+                .autocapitalization(.none)
+            
+        }
+        .padding()
+        .background(lightGrayColor)
+        .cornerRadius(5.0)
+        .padding(.bottom, 20)
+        .padding(.leading, 20)
+        .padding(.trailing, 20)
     }
 }
 
@@ -132,13 +163,13 @@ struct LoginButtonContent : View {
         HStack {
             Text("Login")
                 .font(.custom("Avenir-Medium", size: 20))
-                .foregroundColor(.black)
-            Image(systemName: "cart")
-                .foregroundColor(.black)
+                .foregroundColor(.white)
+//            Image(systemName: "cart")
+//                .foregroundColor(.black)
         }
-        .frame(width: 220, height: 30)
+        .frame(width: 220, height: 16)
             .padding()
-            .background(Color.green)
+            .background(primaryColor)
             .cornerRadius(10.0)
     }
 }
