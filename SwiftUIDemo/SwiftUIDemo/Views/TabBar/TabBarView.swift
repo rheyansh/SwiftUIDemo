@@ -38,7 +38,11 @@ struct TabBarView : View {
             .tag(TabItems.list.rawValue)
             
             NavigationView {
-                SearchBookView()
+                //SearchBookView()
+                //FormView()
+                TutorListView()
+                //ImagelistView()
+                //LandingView()
                 //DataStackView(deals: Deal.previewContent)
                 //RepositoryListView(viewModel: .init())
             }
@@ -49,8 +53,7 @@ struct TabBarView : View {
             .tag(TabItems.grid.rawValue)
                         
             NavigationView {
-                ImagelistView()
-                
+                MyProfileView()
             }
             .tabItem {
                 Image(systemName: "person.crop.circle")

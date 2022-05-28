@@ -78,7 +78,7 @@
 		11FCDD1C22DF26220013FDB9 /* RepositoryListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD1B22DF26220013FDB9 /* RepositoryListRow.swift */; };
 		11FCDD1E22DF26340013FDB9 /* RepositoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDD1D22DF26340013FDB9 /* RepositoryDetailView.swift */; };
 		68AFC8E82841D6DB00D3C03C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFC8E72841D6DB00D3C03C /* TabBarView.swift */; };
-		68AFC8EB2841E0C100D3C03C /* MyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFC8EA2841E0C100D3C03C /* MyProfile.swift */; };
+		68AFC8EB2841E0C100D3C03C /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFC8EA2841E0C100D3C03C /* MyProfileView.swift */; };
 		68AFC8F028420EEE00D3C03C /* ExpandCollapseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFC8EF28420EEE00D3C03C /* ExpandCollapseView.swift */; };
 		68AFC8F42842154700D3C03C /* GroupedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AFC8F32842154700D3C03C /* GroupedListView.swift */; };
 		68DF42C02842360E00FEB792 /* BulkDeleteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF42BF2842360E00FEB792 /* BulkDeleteListView.swift */; };
@@ -172,7 +172,7 @@
 		11FCDD1B22DF26220013FDB9 /* RepositoryListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListRow.swift; sourceTree = "<group>"; };
 		11FCDD1D22DF26340013FDB9 /* RepositoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailView.swift; sourceTree = "<group>"; };
 		68AFC8E72841D6DB00D3C03C /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
-		68AFC8EA2841E0C100D3C03C /* MyProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfile.swift; sourceTree = "<group>"; };
+		68AFC8EA2841E0C100D3C03C /* MyProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
 		68AFC8EF28420EEE00D3C03C /* ExpandCollapseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandCollapseView.swift; sourceTree = "<group>"; };
 		68AFC8F32842154700D3C03C /* GroupedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedListView.swift; sourceTree = "<group>"; };
 		68DF42BF2842360E00FEB792 /* BulkDeleteListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulkDeleteListView.swift; sourceTree = "<group>"; };
@@ -509,7 +509,7 @@
 		68AFC8E92841E0C100D3C03C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				68AFC8EA2841E0C100D3C03C /* MyProfile.swift */,
+				68AFC8EA2841E0C100D3C03C /* MyProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -692,7 +692,7 @@
 				112F2F5922DDF30100075244 /* MenuListView.swift in Sources */,
 				11FCDD1622DF25B40013FDB9 /* SearchRepositoryRequest.swift in Sources */,
 				11FCDD0122DF22AA0013FDB9 /* SearchRepositoryResponse.swift in Sources */,
-				68AFC8EB2841E0C100D3C03C /* MyProfile.swift in Sources */,
+				68AFC8EB2841E0C100D3C03C /* MyProfileView.swift in Sources */,
 				112F2F5F22DDF30100075244 /* ReposStore.swift in Sources */,
 				68DF42C22842362200FEB792 /* SwipeDeleteListView.swift in Sources */,
 				112F2F5822DDF30100075244 /* FormRow.swift in Sources */,

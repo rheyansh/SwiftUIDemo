@@ -10,13 +10,13 @@ import SwiftUI
 
 struct TutorListView : View {
     
-    var tutors: [Tutor] = []
+    var tutors: [Tutor] = testData
     
     var body: some View {
         NavigationView {
             List(tutors) { tutor in
                 TutorRowView(tutor: tutor)
-        }.navigationBarTitle(Text("Tutors"))
+            }.navigationBarTitle(Text("Tutors"), displayMode: .inline)
         }
     }
 }

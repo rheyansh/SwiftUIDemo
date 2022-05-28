@@ -33,7 +33,7 @@ Circle().stroke(Color.orange, lineWidth: 4)
                 .resizable()
                 .frame(width: 200, height: 200)
                 .scaledToFill()
-                .onTapGesture(count: 0, perform: {
+                .onTapGesture(count: 1, perform: {
                     print("12")
                 })
                 .clipShape(Circle())

@@ -65,10 +65,13 @@ struct SettingsView: View {
                         .font(.body)
                         .foregroundColor(Color(.systemGray)),
                     trailing: // Add trailing view
-                    Image("Lawrence Tan")
-                        .resizable()
-                        .frame(width: 40, height: 40)
-                        .clipShape(Circle())) // Clip the image to a circle
+                    NavigationLink(destination: MyProfileView()) {
+                        Image("raj_sharma")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                            .clipShape(Circle()) // Clip the image to a circle
+                    })
+                    
         }
     }
 }
