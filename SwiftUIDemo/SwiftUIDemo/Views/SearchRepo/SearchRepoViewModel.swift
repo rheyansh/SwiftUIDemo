@@ -8,14 +8,8 @@
 
 import SwiftUI
 
-struct SearchRepoViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+class ListViewModel: ObservableObject {
 
-struct SearchRepoViewModel_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchRepoViewModel()
-    }
+   @Published var items = ["item1", "item2", "item3", "item4", "item5","item6"]
+
 }

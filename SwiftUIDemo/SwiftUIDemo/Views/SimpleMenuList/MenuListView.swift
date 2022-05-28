@@ -11,38 +11,57 @@ import SwiftUI
 struct MenuListView : View {
     
     @State var items = [
-        MenuItem(id: "0", title: "Login", subtitle: "Form Example"),
-        MenuItem(id: "1", title: "Item 2", subtitle: "Fire"),
-        MenuItem(id: "2", title: "Item 3", subtitle: "Fire"),
-        MenuItem(id: "3", title: "Item 4", subtitle: "Fire")
+        MenuItem(type: MenuListType.login),
+        MenuItem(type: MenuListType.localSearchDemo),
+        MenuItem(type: MenuListType.expandCollapse),
+        MenuItem(type: MenuListType.simpleMenuList),
+        MenuItem(type: MenuListType.groupedlist),
+        MenuItem(type: MenuListType.swipeDeleteListView),
+        MenuItem(type: MenuListType.bulkDeleteListView)
     ]
     
     var body: some View {
         
-        /*List(items.identified(by: \.title)) { pokemon in
-            HStack {
-                Text(pokemon.title)
-                Text(pokemon.subtitle).foregroundColor(.red)
-            }
-        }*/
-       
-        //return List(items, rowContent: MenuRow.init)
-
-        /*return NavigationView {
-            List(items, rowContent: MenuRow.init).navigationBarTitle(Text("Menu"))
-                .navigationBarItems(
-                    trailing: Button(action: addMenuItem, label: { Text("Add") })
-            )
-        }*/
-        
         return NavigationView {
             List(items) { item in
-                NavigationLink(destination: MenuDetailView(item: item)) {
+                if item.type == .expandCollapse {
+                    NavigationLink(destination: ExpandCollapseView()) {
+                        MenuRow(item: item)
+                    }
+                } else if item.type == .login {
+                    NavigationLink(destination: LoginView()) {
+                        MenuRow(item: item)
+                    }
+                } else if item.type == .groupedlist {
+                    NavigationLink(destination: GroupedListView()) {
+                        MenuRow(item: item)
+                    }
+                } else if item.type == .simpleMenuList {
+                    NavigationLink(destination: FoodList()) {
+                        MenuRow(item: item)
+                    }
+                } else if item.type == .bulkDeleteListView {
+                    NavigationLink(destination: BulkDeleteListView()) {
+                        MenuRow(item: item)
+                    }
+                } else if item.type == .swipeDeleteListView {
+                    NavigationLink(destination: SwipeDeleteListView()) {
+                        MenuRow(item: item)
+                    }
+                }  else if item.type == .localSearchDemo {
+                    let store = ReposStore(service: .init())
+                    let view = SearchRepoView().environmentObject(store)
+
+                    NavigationLink(destination: view) {
+                        MenuRow(item: item)
+                    }
+                } else if item.type == .unknown {
                     MenuRow(item: item)
                 }
-                }.navigationBarTitle(Text("Menu"))
+                }
+            .navigationBarTitle(Text("Menu"), displayMode: .inline)
                 .navigationBarItems(
-                    trailing: Button(action: addMenuItem, label: { Text("Add") })
+                    trailing: Button(action: addMenuItem, label: { Text("Add Row") })
             )
         }
         
@@ -75,24 +94,10 @@ struct MenuListView : View {
     }
     
     func addMenuItem() {
-        if let randomPokemon = items.randomElement() {
-            items.append(randomPokemon)
-        }
+        items.append(MenuItem(type: MenuListType.unknown))
     }
 }
 
-#if DEBUG
-struct MenuListView_Previews : PreviewProvider {
-    static var previews: some View {
-       MenuListView() //MenuListView().previewDevice(PreviewDevice(rawValue: "iPhone XS"))
-        
-//        ForEach(["iPhone SE", "iPhone XS Max"].identified(by: \.self)) { deviceName in
-//            MenuListView()
-//                .previewDevice(PreviewDevice(rawValue: deviceName))
-//        }
-    }
-}
-#endif
 
 
 

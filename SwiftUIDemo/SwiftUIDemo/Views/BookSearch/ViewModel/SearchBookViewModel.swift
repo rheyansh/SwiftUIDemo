@@ -40,16 +40,16 @@ final class SearchBookViewModel: ObservableObject {
         print("Init ViewModel")
         //$0.$$searchText.value
 //https://developer.apple.com/documentation/combine/receiving-and-handling-events-with-combine
-        /*searchCancellable = didChange.eraseToAnyPublisher()
+        searchCancellable = didChange.eraseToAnyPublisher()
             .map {
-                $0.$$searchText.value
+                $0.$searchText
         }
         .debounce(for: 0.5, scheduler: DispatchQueue.main)
-            .removeDuplicates()
-            .filter { !$0.isEmpty && $0.first != " " }
+//            .removeDuplicates()
+//            .filter { !$0.isEmpty && $0.first != " " }
             .flatMap { (searchString) -> AnyPublisher<[Book], Never> in
                 print("searchString: \(searchString)")
-                return BookAPIService.searchBy(title: searchString)
+                return BookAPIService.searchBy(title: self.searchText)
                     .replaceError(with: []) //TODO: Handle Errors
                     .eraseToAnyPublisher()
         }
@@ -58,7 +58,7 @@ final class SearchBookViewModel: ObservableObject {
         }
         .replaceError(with: []) //TODO: Handle Errors
             .assign(to: \.items, on: self)
-         */
+         
     }
     
     private func booksToBookDisplayData(books: [Book]) -> [BookDisplayData]  {

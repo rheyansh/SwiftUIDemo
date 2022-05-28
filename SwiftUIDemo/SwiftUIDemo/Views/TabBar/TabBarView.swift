@@ -19,9 +19,7 @@ struct TabBarView : View {
         return TabView(selection: $selectedTab) {
 
             NavigationView() {
-                //LoginView()
-                DemoListView()
-
+                LoginView()
             }
             .tabItem {
                 Image(systemName: "house.circle.fill")
@@ -30,51 +28,55 @@ struct TabBarView : View {
             .tag(TabItems.dashboard.rawValue)
             
             NavigationView {
-                FoodList()
+                MenuListView()
+                //FoodList()
             }
             .tabItem {
-                Image(systemName: "bookmark.circle.fill")
+                Image(systemName: "doc.text.fill")
                 Text("List")
             }
             .tag(TabItems.list.rawValue)
             
             NavigationView {
                 SearchBookView()
+                //DataStackView(deals: Deal.previewContent)
+                //RepositoryListView(viewModel: .init())
             }
             .tabItem {
                 Image(systemName: "video.circle.fill")
                 Text("Grid")
             }
             .tag(TabItems.grid.rawValue)
-            
+                        
             NavigationView {
-                MenuListView()
-            }
-            .tabItem {
-                Image(systemName: "list.dash")
-                Text("Settings")
-            }
-            .tag(TabItems.settings.rawValue)
-            
-            NavigationView {
-                DemoListView()
+                ImagelistView()
+                
             }
             .tabItem {
                 Image(systemName: "person.crop.circle")
-                Text("Settings")
+                Text("Profile")
             }
             .tag(TabItems.settings.rawValue)
+            
+            SettingNavView()
         }
     }
 }
 
-#if DEBUG
-struct TabBarView_Previews : PreviewProvider {
-    static var previews: some View {
-        TabBarView()
+struct SettingNavView : View {
+    
+    var body: some View {
+        return NavigationView {
+            let store = SettingsStore()
+            SettingsView().environmentObject(store)
+        }
+        .tabItem {
+            Image(systemName: "list.dash")
+            Text("Settings")
+        }
+        .tag(TabItems.settings.rawValue)
     }
 }
-#endif
 
 /*
  TabView {

@@ -8,8 +8,7 @@
 
 import SwiftUI
 
-struct MenuRow : View {
-    
+struct MenuRow: View {
     var item: MenuItem
     
     var body: some View {
@@ -24,11 +23,3 @@ struct MenuRow : View {
         }
     }
 }
-
-#if DEBUG
-struct MenuRow_Previews : PreviewProvider {
-    static var previews: some View {
-        MenuRow(item: MenuItem(id: "1", title: "Item 2", subtitle: "Fire"))
-    }
-}
-#endif

@@ -9,34 +9,33 @@
 import SwiftUI
 
 struct BulkDeleteListView: View {
-    let foods = [
-            "Burger",
-            "Fried Chicken",
-            "Salads"
-        ]
-        
-        let drinks = [
-            "Orange Juice",
-            "Tea",
-            "Coffee Latte",
-            "Mineral water"
-        ]
-        var body: some View {
-            List {
-                Section(header: Text("Foods")) {
-                    ForEach(foods, id: \.self) { item in
-                        Text(item)
+    
+    @State var bookTitles = [
+        "Book 1",
+        "Book 2",
+        "Book 3",
+        "Book 4",
+        "Book 5",
+        "Book 6"
+    ]
+    var body: some View {
+        NavigationView {
+                List {
+                    ForEach (bookTitles, id: \.self) { title in
+                        SwipeDeleteRowView(title: title)
                     }
+                    .onDelete(perform: { indexSet in
+                        deleteAction(indexSet)
+                    })
                 }
-                
-                Section(header: Text("Beverages")) {
-                    ForEach(drinks, id: \.self) { item in
-                        Text(item)
-                    }
-                }
-                
+                .navigationTitle("My Books")
+                .navigationBarItems(trailing: EditButton())
             }
-        }
+    }
+    
+    func deleteAction(_ index: IndexSet) {
+        bookTitles.remove(atOffsets: index)
+    }
 }
 
 struct SectionList_Previews: PreviewProvider {

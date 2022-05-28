@@ -94,7 +94,7 @@ struct BookDetail : View {
                                 .lineLimit(nil)
                             }
                         
-//                        ForEach(self.displayData.authors.identified(by: \.self)) { author in
+//                        ForEach(self.displayData.authors, id: \.self) { author in
 //                            Text(author)
 //                                .font(.footnote)
 //                                .lineLimit(nil)

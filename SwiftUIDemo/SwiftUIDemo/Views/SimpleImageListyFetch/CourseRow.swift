@@ -23,7 +23,7 @@ struct CourseRow : View {
 #if DEBUG
 struct CourseRow_Previews : PreviewProvider {
     static var previews: some View {
-        CourseRow(course: Course(id: 0, name: "Swift UI Tute", link: "", imageUrl: "", number_of_lessons: 46))
+        CourseRow(course: Course(id: 0, name: "Swift UI Tute", link: "", imageUrl: "", numberOfLessons: 46))
     }
 }
 #endif

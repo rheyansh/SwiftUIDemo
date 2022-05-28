@@ -68,31 +68,31 @@ final class RepositoryListViewModel: ObservableObject, UnidirectionalDataFlowTyp
     }
     
     private func bindInputs() {
-//        let request = SearchRepositoryRequest()
-//        let responsePublisher = onAppearSubject
-//            .flatMap { [apiService] _ in
-//                apiService.response(from: request)
-//                    .catch { [weak self] error -> Publishers.Empty<SearchRepositoryResponse, Never> -> <#Result#> in
-//                        self?.errorSubject.send(error)
-//                        return .init()
-//                }
-//        }
-//        
-//        let responseStream = responsePublisher
-//            .share()
-//            .subscribe(responseSubject)
-//        
-//        _ = trackingSubject
-//            .sink(receiveValue: trackerService.log)
-//        
-//        let trackingStream = onAppearSubject
-//            .map { .listView }
-//            .subscribe(trackingSubject)
-//        
-//        cancellables += [
-//            responseStream,
-//            trackingStream
-//        ]
+        let request = SearchRepositoryRequest()
+        let responsePublisher = onAppearSubject
+            .flatMap { [apiService] _ in
+                apiService.response(from: request)
+                    .catch { [weak self] error -> Empty<SearchRepositoryResponse, Never> in
+                        self?.errorSubject.send(error)
+                        return .init()
+                }
+        }
+        
+        let responseStream = responsePublisher
+            .share()
+            .subscribe(responseSubject)
+        
+        _ = trackingSubject
+            .sink(receiveValue: trackerService.log)
+        
+        let trackingStream = onAppearSubject
+            .map { .listView }
+            .subscribe(trackingSubject)
+        
+        cancellables += [
+            responseStream,
+            trackingStream
+        ]
     }
     
     private func bindOutputs() {

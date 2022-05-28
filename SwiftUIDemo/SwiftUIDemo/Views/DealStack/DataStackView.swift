@@ -34,7 +34,7 @@ struct DataStackView : View {
                     .animation(Animation.interpolatingSpring(stiffness: 90, damping: 0.5)) // This curve will be applied to the offset and scale modifiers
                     .brightness(-0.3 + Double(self.order(for: deal)) * 0.1)
                     .animation(Animation.easeInOut(duration: 0.4)) // This curve will be applied to the brightness modifier
-                    .onTapGesture(count: 0, perform: {
+                    .onTapGesture(count: 1, perform: {
                         self.bringToFront(deal)
                     }).gesture(DragGesture().onChanged({ value in
                     self.dragOffset = value.translation
@@ -51,7 +51,7 @@ struct DataStackView : View {
     
     private func bringToFront(_ deal: Deal) {
         guard let idx = deals.firstIndex(where: { $0.id == deal.id }) else { return }
-        
+                
         var mutableDeals = deals
         var mutableDeal = deal
         

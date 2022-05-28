@@ -32,7 +32,8 @@ struct LoginView : View {
                 UsernameTextField(username: $username, editingMode: $editingMode)
                 PasswordSecureField(password: $password, editingMode: $editingMode)
                 DemoCredentialText()
-
+                ForgotPasswordButton()
+                
                 if authenticationDidFail {
                     Text("Information not correct. Try again.")
                         .offset(y: -10)
@@ -87,12 +88,33 @@ struct WelcomeText: View {
 
 struct DemoCredentialText: View {
     var body: some View {
-        return Text("Demo Credential: bruce/11111111")
-            .font(.custom("Avenir-Medium", size: 12))
-            .foregroundColor(darkGrayColor)
-            .padding(.bottom, 20)
+        return HStack() {
+            Text("Demo Credential: bruce/11111111")
+                .font(.custom("Avenir-Medium", size: 12))
+                .foregroundColor(darkGrayColor)
+                .padding(.bottom, 4)
+            Spacer()
+
+        }.padding(.leading, 20)
     }
 }
+
+struct ForgotPasswordButton: View {
+    var body: some View {
+        
+        return HStack() {
+            Spacer()
+            Button {
+                debugPrint("Forgot Password Tapped")
+            } label: {
+                Text("Forgot Password")
+            }
+        }.padding(.bottom, 20)
+            .padding(.trailing, 20)
+    }
+}
+
+
 
 struct LogoImage: View {
     var body: some View {

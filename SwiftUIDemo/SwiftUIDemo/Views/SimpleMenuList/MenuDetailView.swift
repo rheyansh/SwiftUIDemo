@@ -43,7 +43,7 @@ struct MenuDetailView : View {
 #if DEBUG
 struct MenuDetailView_Previews : PreviewProvider {
     static var previews: some View {
-        MenuDetailView(item: MenuItem(id: "1", title: "Item 2", subtitle: "Joshua Tree National Park"))
+        MenuDetailView(item: MenuItem(type: .expandCollapse))
     }
 }
 #endif

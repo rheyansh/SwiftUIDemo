@@ -14,5 +14,5 @@ struct Course: Decodable, Identifiable {
     let name: String
     let link: String
     let imageUrl: String
-    let number_of_lessons: Int
+    let numberOfLessons: Int
 }

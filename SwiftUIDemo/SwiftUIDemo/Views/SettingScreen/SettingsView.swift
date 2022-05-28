@@ -41,7 +41,7 @@ struct SettingsView: View {
                     }
                 }
                 
-                if !settings.isPro {
+                //if !settings.isPro {
                     Section {
                         Button(action: {
                             self.settings.unlockPro()
@@ -55,17 +55,21 @@ struct SettingsView: View {
                             Text("Restore purchase")
                         }
                     }
+                //}
                 }
-                }
-                .navigationBarTitle(Text("Settings"))
+            .navigationBarTitle(Text("Settings"), displayMode: .inline)
+
+                .navigationBarItems(
+                    leading:
+                    Text("Premium Member")
+                        .font(.body)
+                        .foregroundColor(Color(.systemGray)),
+                    trailing: // Add trailing view
+                    Image("Lawrence Tan")
+                        .resizable()
+                        .frame(width: 40, height: 40)
+                        .clipShape(Circle())) // Clip the image to a circle
         }
     }
 }
 
-#if DEBUG
-struct SettingsView_Previews : PreviewProvider {
-    static var previews: some View {
-        SettingsView().environmentObject(SettingsStore())
-    }
-}
-#endif

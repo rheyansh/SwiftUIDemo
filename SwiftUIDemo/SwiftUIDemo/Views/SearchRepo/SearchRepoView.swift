@@ -10,18 +10,26 @@ import SwiftUI
 
 struct SearchRepoView : View {
     
-    @State private var query: String = "Swift"
-    @EnvironmentObject var repoStore: ReposStore
+    @State private var query: String = "R"
 
+    @EnvironmentObject var repoStore: ReposStore
     
     var body: some View {
         NavigationView {
             List {
-                TextField("type something...", text: $query, onCommit: fetch)
+                TextField("type something", text: $query)
+                            .onChange(of: query) { _ in
+                                fetch()
+                            }
+                
+//                List(repoStore.repos, id: \.id) { item in
+//                    RepoRow(repo: item)
+//                 }
+                
                 ForEach(repoStore.repos) { repo in
                     RepoRow(repo: repo)
                 }
-                }.navigationBarTitle(Text("Search"))
+                }.navigationBarTitle(Text("Search"), displayMode: .inline)
             }.onAppear(perform: fetch)
     }
     
@@ -30,10 +38,3 @@ struct SearchRepoView : View {
     }
 }
 
-#if DEBUG
-struct SearchRepoView_Previews : PreviewProvider {
-    static var previews: some View {
-        SearchRepoView().environmentObject(ReposStore(service: .init()))
-    }
-}
-#endif
