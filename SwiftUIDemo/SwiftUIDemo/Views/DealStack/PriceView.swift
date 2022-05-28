@@ -16,7 +16,7 @@ struct PriceView : View {
             Text(self.formattedPrice)
                 .font(.headline)
                 .fontWeight(.black)
-                .color(.white)
+                .foregroundColor(.white)
                 .padding(.vertical, 4)
                 .padding(.horizontal, 8)
         }.background(RoundedRectangle(cornerRadius: 8)

@@ -10,7 +10,7 @@ import Foundation
 import Combine
 import SwiftUI
 
-class NetworkManager: BindableObject {
+class NetworkManager: ObservableObject {
     
     var didChange = PassthroughSubject<NetworkManager, Never>()
     

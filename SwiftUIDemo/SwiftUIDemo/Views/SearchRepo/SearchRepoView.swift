@@ -17,7 +17,7 @@ struct SearchRepoView : View {
     var body: some View {
         NavigationView {
             List {
-                TextField($query, placeholder: Text("type something..."), onCommit: fetch)
+                TextField("type something...", text: $query, onCommit: fetch)
                 ForEach(repoStore.repos) { repo in
                     RepoRow(repo: repo)
                 }

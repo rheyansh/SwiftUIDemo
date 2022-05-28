@@ -23,19 +23,20 @@ struct DataStackView : View {
     var body: some View {
         ZStack {
             ForEach(deals) { deal in
-                return DealView(deal: deal)
+                DealView(deal: deal)
                     .frame(width: 338, height: 220, alignment: .center)
                     .cornerRadius(8)
                     .scaleEffect(0.8 + CGFloat(self.order(for: deal)) * 0.12)
                     .offset(x: 0, y: CGFloat(self.order(for: deal)) * 24.0)
                     .offset(x: self.dragOffset.width * CGFloat(self.order(for: deal)) * 0.2, y: self.dragOffset.height * CGFloat(self.order(for: deal)) * 0.2)
                     .shadow(radius: 20)
-                    .animation(.fluidSpring(stiffness: 90, dampingFraction: 0.5)) // This curve will be applied to the offset and scale modifiers
+
+                    .animation(Animation.interpolatingSpring(stiffness: 90, damping: 0.5)) // This curve will be applied to the offset and scale modifiers
                     .brightness(-0.3 + Double(self.order(for: deal)) * 0.1)
-                    .animation(.basic(duration: 0.4, curve: .easeInOut)) // This curve will be applied to the brightness modifier
-                    .tapAction {
+                    .animation(Animation.easeInOut(duration: 0.4)) // This curve will be applied to the brightness modifier
+                    .onTapGesture(count: 0, perform: {
                         self.bringToFront(deal)
-                }.gesture(DragGesture().onChanged({ value in
+                    }).gesture(DragGesture().onChanged({ value in
                     self.dragOffset = value.translation
                 }).onEnded({ _ in
                     self.dragOffset = .zero

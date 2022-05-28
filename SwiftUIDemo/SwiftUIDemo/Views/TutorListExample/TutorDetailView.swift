@@ -41,13 +41,13 @@ struct TutorDetailView : View {
             HStack {
                 Text("Phone")
                 Spacer()
-                Text("98567487345").color(.gray)
+                Text("98567487345").foregroundColor(.gray)
             }.padding(.bottom, 5)
             
             HStack {
                 Text("Email")
                 Spacer()
-                Text("test@mail.com").color(.gray)
+                Text("test@mail.com").foregroundColor(.gray)
             }.padding(.bottom, 5)
             
             HStack {
@@ -55,8 +55,8 @@ struct TutorDetailView : View {
                 Spacer()
                 
                 VStack(alignment: .trailing) {
-                    Text("Sarita Vihar").color(.gray)
-                    Text("New Delhi, Delhi - 110044").color(.gray)
+                    Text("Sarita Vihar").foregroundColor(.gray)
+                    Text("New Delhi, Delhi - 110044").foregroundColor(.gray)
                 }
             }.padding(.bottom, 5)
             

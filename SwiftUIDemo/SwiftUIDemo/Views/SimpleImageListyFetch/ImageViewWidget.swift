@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ImageViewWidget : View {
     
-    @ObjectBinding var imageLoader:ImageLoader
+    @ObservedObject var imageLoader:ImageLoader
     
     var body: some View {
         

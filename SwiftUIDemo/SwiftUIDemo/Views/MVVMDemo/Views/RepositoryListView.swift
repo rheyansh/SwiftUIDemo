@@ -9,16 +9,16 @@
 import SwiftUI
 
 struct RepositoryListView : View {
-    @ObjectBinding var viewModel: RepositoryListViewModel
+    @ObservedObject var viewModel: RepositoryListViewModel
     
     var body: some View {
         NavigationView {
             List(viewModel.output.repositories) { repository in
                 RepositoryListRow(repository: repository)
             }
-            .presentation($viewModel.isErrorShown) { () -> Alert in
+            .alert(isPresented: $viewModel.isErrorShown) {
                 Alert(title: Text("Error"), message: Text(viewModel.output.errorMessage))
-            }
+                    }
             .navigationBarTitle(Text("Repositories"))
         }
         .onAppear(perform: { self.viewModel.apply(.onAppear) })

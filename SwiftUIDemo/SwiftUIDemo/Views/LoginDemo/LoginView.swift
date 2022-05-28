@@ -56,7 +56,7 @@ struct LoginView : View {
                     .background(Color.green)
                     .cornerRadius(20.0)
                     .foregroundColor(.white)
-                    .animation(.basic(duration: 0.5, curve: .easeIn))
+                    .animation(.easeIn(duration: 0.5), value: 2)
             }
         }
         .offset(y: editingMode ? -150 : 0)
@@ -100,7 +100,7 @@ struct UsernameTextField : View {
     @Binding var editingMode: Bool
 
     var body: some View {
-        return TextField($username, placeholder: Text("Username"), onEditingChanged: {edit in
+        return TextField("Username", text: $username, onEditingChanged: {edit in
             if edit == true
             {self.editingMode = true}
             else
@@ -119,7 +119,7 @@ struct PasswordSecureField : View {
     @Binding var editingMode: Bool
 
     var body: some View {
-        return SecureField($password, placeholder: Text("Password"))
+        return SecureField("Password", text: $password)
             .padding()
             .background(lightGreyColor)
             .cornerRadius(5.0)
@@ -132,7 +132,7 @@ struct LoginButtonContent : View {
         HStack {
             Text("Login")
                 .font(.custom("Avenir-Medium", size: 20))
-                .color(.black)
+                .foregroundColor(.black)
             Image(systemName: "cart")
                 .foregroundColor(.black)
         }

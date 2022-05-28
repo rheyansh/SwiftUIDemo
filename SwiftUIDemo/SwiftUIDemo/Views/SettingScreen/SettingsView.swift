@@ -30,9 +30,10 @@ struct SettingsView: View {
                         selection: $settings.sleepTrackingMode,
                         label: Text("Sleep tracking mode")
                     ) {
-                        ForEach(SettingsStore.SleepTrackingMode.allCases.identified(by: \.self)) {
+                        
+                        ForEach(SettingsStore.SleepTrackingMode.allCases, id: \.self) {
                             Text($0.rawValue).tag($0)
-                        }
+                            }
                     }
                     
                     Stepper(value: $settings.sleepGoal, in: 6...12) {

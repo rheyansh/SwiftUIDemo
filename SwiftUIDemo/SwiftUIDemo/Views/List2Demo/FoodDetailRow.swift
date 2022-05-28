@@ -24,7 +24,7 @@ struct FoodDetailRow: View {
             Spacer()
             Button(action: {print("Order received")}) {
                 Text("ORDER")
-                    .color(.white)
+                    .foregroundColor(.white)
             }
             .frame(width: 80, height: 50)
                 .background(Color.orange)

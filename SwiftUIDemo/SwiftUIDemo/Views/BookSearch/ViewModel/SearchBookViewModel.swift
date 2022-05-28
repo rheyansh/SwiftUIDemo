@@ -9,7 +9,9 @@
 import SwiftUI
 import Combine
 
-final class SearchBookViewModel: BindableObject {
+//https://www.avanderlee.com/combine/passthroughsubject-currentvaluesubject-explained/
+
+final class SearchBookViewModel: ObservableObject {
     var didChange = PassthroughSubject<SearchBookViewModel, Never>()
     
     @Published var searchText = "" {
@@ -36,8 +38,9 @@ final class SearchBookViewModel: BindableObject {
     
     init () {
         print("Init ViewModel")
-        
-        searchCancellable = didChange.eraseToAnyPublisher()
+        //$0.$$searchText.value
+//https://developer.apple.com/documentation/combine/receiving-and-handling-events-with-combine
+        /*searchCancellable = didChange.eraseToAnyPublisher()
             .map {
                 $0.$$searchText.value
         }
@@ -55,6 +58,7 @@ final class SearchBookViewModel: BindableObject {
         }
         .replaceError(with: []) //TODO: Handle Errors
             .assign(to: \.items, on: self)
+         */
     }
     
     private func booksToBookDisplayData(books: [Book]) -> [BookDisplayData]  {

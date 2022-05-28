@@ -28,7 +28,7 @@ struct DealView: View {
                 ZStack {
                     Text(deal.title)
                         .font(.headline)
-                        .color(.white)
+                        .foregroundColor(.white)
                         .lineLimit(nil)
                         .padding()
                         .shadow(color: .init(.displayP3, red: 0, green: 0, blue: 0, opacity: 0.5), radius: 2, x: 0, y: 1)

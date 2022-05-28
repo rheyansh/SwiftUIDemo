@@ -19,7 +19,7 @@ struct MenuRow : View {
             VStack(alignment: .leading) {
                 Text(item.title)
                 Text(item.subtitle).font(.subheadline)
-                    .color(.gray)
+                    .foregroundColor(.gray)
             }
         }
     }

@@ -87,11 +87,18 @@ struct BookDetail : View {
                         Text("Authors:")
                             .font(.footnote)
                             .fontWeight(.semibold)
-                        ForEach(self.displayData.authors.identified(by: \.self)) { author in
-                            Text(author)
+                        
+                        ForEach(self.displayData.authors, id: \.self) {
+                            Text($0)
                                 .font(.footnote)
                                 .lineLimit(nil)
-                        }
+                            }
+                        
+//                        ForEach(self.displayData.authors.identified(by: \.self)) { author in
+//                            Text(author)
+//                                .font(.footnote)
+//                                .lineLimit(nil)
+//                        }
                         
                         Text(self.displayData.description)
                             .multilineTextAlignment(.center)

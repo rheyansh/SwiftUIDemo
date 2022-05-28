@@ -15,7 +15,7 @@ struct LandingView : View {
                 .resizable()
                 .frame(width: 200, height: 200)
                 .scaledToFill()
-                .tapAction(count: 0, {
+                .onTapGesture(count: 1, perform: {
                     print("11")
                 })
                 .clipShape(Circle())
@@ -33,9 +33,9 @@ Circle().stroke(Color.orange, lineWidth: 4)
                 .resizable()
                 .frame(width: 200, height: 200)
                 .scaledToFill()
-            .tapAction(count: 0, {
-                print("12")
-            })
+                .onTapGesture(count: 0, perform: {
+                    print("12")
+                })
                 .clipShape(Circle())
                 .overlay(
                     Circle().stroke(Color.orange, lineWidth: 4)

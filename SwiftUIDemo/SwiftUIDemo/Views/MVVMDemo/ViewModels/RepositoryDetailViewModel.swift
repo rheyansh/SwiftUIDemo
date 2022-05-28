@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-final class RepositoryDetailViewModel: BindableObject {
+final class RepositoryDetailViewModel: ObservableObject {
     let didChange: AnyPublisher<RepositoryListViewModel, Never>
     let didChangeSubject = PassthroughSubject<RepositoryListViewModel, Never>()
     

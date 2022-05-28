@@ -60,7 +60,7 @@ struct CategoryView : View {
             Spacer()
             Text(categoryName)
                 .font(.custom("HelveticaNeue-Medium", size: 50))
-                .color(.white)
+                .foregroundColor(.white)
         }
         .padding(.top, 5)
             .padding(.bottom, 5)

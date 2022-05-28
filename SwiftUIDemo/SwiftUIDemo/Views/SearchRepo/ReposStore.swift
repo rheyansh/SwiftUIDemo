@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-class ReposStore: BindableObject {
+class ReposStore: ObservableObject {
     var repos: [Repo] = [] {
         didSet {
             didChange.send(self)

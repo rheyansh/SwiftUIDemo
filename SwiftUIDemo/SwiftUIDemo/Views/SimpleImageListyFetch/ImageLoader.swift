@@ -10,7 +10,7 @@ import Foundation
 import Combine
 import SwiftUI
 
-class ImageLoader: BindableObject {
+class ImageLoader: ObservableObject {
     
     var didChange = PassthroughSubject<Data, Never>()
     

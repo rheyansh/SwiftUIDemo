@@ -19,7 +19,7 @@ struct TutorRowView : View {
                 Text(tutor.name)
                 Text(tutor.headline)
                     .font(.subheadline)
-                    .color(.gray)
+                    .foregroundColor(.gray)
             }
         }
     }
