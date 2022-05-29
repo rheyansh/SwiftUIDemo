@@ -58,7 +58,7 @@ struct LoginView : View {
                 Text("Login succeeded!")
                     .font(.headline)
                     .frame(width: 250, height: 80)
-                    .background(Color.green)
+                    .background(primaryColor)
                     .cornerRadius(20.0)
                     .foregroundColor(.white)
                     .animation(.easeIn(duration: 0.5), value: 2)

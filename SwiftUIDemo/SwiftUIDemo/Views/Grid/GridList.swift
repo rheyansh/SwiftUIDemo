@@ -18,7 +18,7 @@ struct GridList: View {
     
     var body: some View {
         
-        return NavigationView {
+        return
             List(items) { item in
                 if item.type == .listWithLazyVGrid {
                     NavigationLink(destination: ListWithLazyVGrid()) {
@@ -36,7 +36,6 @@ struct GridList: View {
                 }
             .navigationBarTitle(Text("Grid Demo"), displayMode: .inline)
         }
-    }
 }
 
 struct GridListRowView: View {
@@ -55,3 +54,4 @@ struct GridListRowView: View {
 }
 
 //https://www.appcoda.com/learnswiftui/swiftui-gridlayout.html
+

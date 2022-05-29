@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 
 enum MenuListType {
-    case unknown, login, groupedlist, expandCollapse, swipeDeleteListView, bulkDeleteListView, simpleMenuList, localSearchDemo
+    case unknown, login, groupedlist, expandCollapse, swipeDeleteListView, bulkDeleteListView, simpleMenuList, localSearchDemo, tutorList
 }
 
 class MenuItem: Identifiable {
@@ -53,6 +53,10 @@ class MenuItem: Identifiable {
         case .localSearchDemo:
             self.title = "Local Search Demo"
             self.subtitle = "filter list based on local search"
+
+        case .tutorList:
+            self.title = "A Tutor List"
+            self.subtitle = "attractive tutor list"
 
         case .unknown:
             self.title = "New Cell"

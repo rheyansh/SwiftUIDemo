@@ -12,6 +12,7 @@ struct MenuListView : View {
     
     @State var items = [
         MenuItem(type: MenuListType.login),
+        MenuItem(type: MenuListType.tutorList),
         MenuItem(type: MenuListType.localSearchDemo),
         MenuItem(type: MenuListType.expandCollapse),
         MenuItem(type: MenuListType.simpleMenuList),
@@ -22,14 +23,17 @@ struct MenuListView : View {
     
     var body: some View {
         
-        return NavigationView {
-            List(items) { item in
+        return List(items) { item in
                 if item.type == .expandCollapse {
                     NavigationLink(destination: ExpandCollapseView()) {
                         MenuRow(item: item)
                     }
                 } else if item.type == .login {
                     NavigationLink(destination: LoginView()) {
+                        MenuRow(item: item)
+                    }
+                } else if item.type == .tutorList {
+                    NavigationLink(destination: TutorListView()) {
                         MenuRow(item: item)
                     }
                 } else if item.type == .groupedlist {
@@ -63,17 +67,6 @@ struct MenuListView : View {
                 .navigationBarItems(
                     trailing: Button(action: addMenuItem, label: { Text("Add Row") })
             )
-        }
-        
-        /*NavigationView {
-            List(items) { item in
-                MenuRow(item: item)
-    }.navigationBarTitle(Text("Menu"))
-            .navigationBarItems(
-                    trailing: Button(action: addMenuItem, label: { Text("Add") })
-            )
-            
-        }*/
     }
     
     func delete(at offsets: IndexSet) {

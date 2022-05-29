@@ -13,18 +13,8 @@ struct TutorListView : View {
     var tutors: [Tutor] = testData
     
     var body: some View {
-        NavigationView {
-            List(tutors) { tutor in
-                TutorRowView(tutor: tutor)
-            }.navigationBarTitle(Text("Tutors"), displayMode: .inline)
-        }
+        List(tutors) { tutor in
+            TutorRowView(tutor: tutor)
+        }.navigationBarTitle(Text("Tutors"), displayMode: .inline)
     }
 }
-
-#if DEBUG
-struct TutorListView_Previews : PreviewProvider {
-    static var previews: some View {
-        TutorListView(tutors: testData)
-    }
-}
-#endif

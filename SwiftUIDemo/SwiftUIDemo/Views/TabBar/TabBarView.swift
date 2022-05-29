@@ -12,9 +12,22 @@ enum TabItems: Int {
     case dashboard, list, grid, settings
 }
 
+
+let barBgColor = UIColor(red: 240/255.0, green: 243/255.0, blue: 244/255.0, alpha: 1)
+
 struct TabBarView : View {
     @State private var selectedTab = TabItems.dashboard.rawValue
 
+    init() {
+        
+        let tabBarAppeareance = UITabBarAppearance()
+        tabBarAppeareance.shadowColor = .gray // For line separator of the tab bar
+        
+        UITabBar.appearance().backgroundColor = barBgColor
+        UITabBar.appearance().barTintColor = UIColor(red: 51/255.0, green: 105/255.0, blue: 172/255.0, alpha: 1.0)
+        UITabBar.appearance().standardAppearance = tabBarAppeareance
+    }
+    
     var body: some View {
         return TabView(selection: $selectedTab) {
 
@@ -36,11 +49,10 @@ struct TabBarView : View {
                 Text("List")
             }
             .tag(TabItems.list.rawValue)
-            
+
             NavigationView {
                 //SearchBookView()
                 //FormView()
-                //TutorListView()
                 GridList()
 
                 //ImagelistView()
@@ -53,7 +65,7 @@ struct TabBarView : View {
                 Text("Grid")
             }
             .tag(TabItems.grid.rawValue)
-                        
+
             NavigationView {
                 MyProfileView()
             }
@@ -62,7 +74,7 @@ struct TabBarView : View {
                 Text("Profile")
             }
             .tag(TabItems.settings.rawValue)
-            
+
             SettingNavView()
         }
     }
@@ -89,3 +101,4 @@ struct SettingNavView : View {
  }
  .tabViewStyle(PageTabViewStyle())
  */
+
