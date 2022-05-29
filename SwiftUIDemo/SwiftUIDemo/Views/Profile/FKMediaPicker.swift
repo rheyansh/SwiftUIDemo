@@ -15,7 +15,7 @@ class FKMediaPicker: NSObject, UIImagePickerControllerDelegate, UINavigationCont
     
     static let mediaPicker = FKMediaPicker()
     
-    typealias DidFinishPickingMediaBlock = (_ info: [String : Any], _ pickedImage: UIImage?) -> Void
+    typealias DidFinishPickingMediaBlock = (/*_ info: [Hashable : Any], */_ pickedImage: UIImage?) -> Void
     private var finishedPickingMediaWithInfo: DidFinishPickingMediaBlock?
     
     typealias DidCancelledPickingMediaBlock = () -> Void
@@ -30,14 +30,16 @@ class FKMediaPicker: NSObject, UIImagePickerControllerDelegate, UINavigationCont
                 
                 if index == 0 {
                     
-                    self.pickMediaFromCamera(cameraBlock: { (info: [String : Any], pickedImage: UIImage?) in
-                        imageBlock(info, pickedImage)
+                    self.pickMediaFromCamera(cameraBlock: { (pickedImage: UIImage?) in
+                        imageBlock(pickedImage)
+                        currentController.dismiss(animated: true)
                     })
                     
                 } else if index == 1 {
                     
-                    self.pickMediaFromGallery(galleryBlock: { (info: [String : Any], pickedImage: UIImage?) in
-                        imageBlock(info, pickedImage)
+                    self.pickMediaFromGallery(galleryBlock: { (pickedImage: UIImage?) in
+                        imageBlock(pickedImage)
+                        currentController.dismiss(animated: true)
                     })
                 }
             }
@@ -48,7 +50,7 @@ class FKMediaPicker: NSObject, UIImagePickerControllerDelegate, UINavigationCont
         
         finishedPickingMediaWithInfo = cameraBlock
         
-        if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)) {
+        if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera)) {
             
             let status = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
             if (status == .authorized || status == .notDetermined) {
@@ -67,8 +69,8 @@ class FKMediaPicker: NSObject, UIImagePickerControllerDelegate, UINavigationCont
                 }
             }
         } else {
-            pickMediaFromGallery(galleryBlock: { (info: [String : Any], pickedImage: UIImage?) in
-                cameraBlock(info, pickedImage)
+            pickMediaFromGallery(galleryBlock: { (pickedImage: UIImage?) in
+                cameraBlock(pickedImage)
             })
         }
     }
@@ -95,13 +97,11 @@ class FKMediaPicker: NSObject, UIImagePickerControllerDelegate, UINavigationCont
     
     // MARK:- - image picker delegate
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        picker.dismiss(animated: true, completion: nil)
-        
-        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         
         if let finishedPickingMediaWithInfo = finishedPickingMediaWithInfo {
-            finishedPickingMediaWithInfo(info, image)
+            finishedPickingMediaWithInfo(image)
         }
     }
     
@@ -122,17 +122,62 @@ class FKMediaPicker: NSObject, UIImagePickerControllerDelegate, UINavigationCont
                 
                 if index == 0 {
                     
-                    self.pickMediaFromCamera(true, cameraBlock: { (info: [String : Any], pickedImage: UIImage?) in
-                        videoBlock(info, pickedImage)
+                    self.pickMediaFromCamera(true, cameraBlock: { (pickedImage: UIImage?) in
+                        videoBlock(pickedImage)
                     })
                     
                 } else if index == 1 {
                     
-                    self.pickMediaFromGallery(true, galleryBlock: { (info: [String : Any], pickedImage: UIImage?) in
-                        videoBlock(info, pickedImage)
+                    self.pickMediaFromGallery(true, galleryBlock: { (pickedImage: UIImage?) in
+                        videoBlock(pickedImage)
                     })
                 }
             }
         }
+    }
+}
+
+// MARK:- Private Extensions
+
+private extension UIApplication {
+    static var keyWindow: UIWindow? {
+        if #available(iOS 13.0, *) {
+         return UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+         } else {
+            return UIApplication.shared.delegate?.window ?? nil
+         }
+    }
+}
+
+private extension UIWindow {
+    
+    static var currentController: UIViewController? {
+        return UIApplication.keyWindow?.currentController
+    }
+    
+    var currentController: UIViewController? {
+        if let vc = self.rootViewController {
+            return topViewController(controller: vc)
+        }
+        return nil
+    }
+    
+    func topViewController(controller: UIViewController? = UIApplication.keyWindow?.rootViewController) -> UIViewController? {
+        if let nc = controller as? UINavigationController {
+            if nc.viewControllers.count > 0 {
+                return topViewController(controller: nc.viewControllers.last!)
+            } else {
+                return nc
+            }
+        }
+        if let tabController = controller as? UITabBarController {
+            if let selected = tabController.selectedViewController {
+                return topViewController(controller: selected)
+            }
+        }
+        if let presented = controller?.presentedViewController {
+            return topViewController(controller: presented)
+        }
+        return controller
     }
 }

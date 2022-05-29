@@ -69,14 +69,6 @@ struct LoginView : View {
     }
 }
 
-#if DEBUG
-struct LoginView_Previews : PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
-#endif
-
 struct WelcomeText: View {
     var body: some View {
         return Text("THINK")

@@ -13,7 +13,7 @@ struct MyProfileView : View {
     
     var body: some View {
         
-        SmartScrollView {
+        List {
             VStack {
                 
                 MyProfileImage()
@@ -29,14 +29,14 @@ struct MyProfileView : View {
                 MyProfileAddress()
                 Spacer()
             }
-            .background(GeometryReader {
-                // calculate height by consumed background and store in
-                // view preference
-                Color.clear.preference(key: ViewHeightKey.self,
-                    value: $0.frame(in: .local).size.height) })
         }
         .padding(16)
-        
+        .navigationBarTitle(Text("My Profile"), displayMode: .inline)
+        .navigationBarItems(
+            trailing: NavigationLink(destination: EditProfileView()) {
+                Text("Edit Profile")
+            }
+    )
     }
 }
 
@@ -45,7 +45,7 @@ struct MyProfileImage: View {
         return Image("raj_sharma")
             .resizable()
             .clipShape(Circle())
-            .frame(width: 200, height: 200)
+            .frame(width: 160, height: 160)
             .overlay(Circle().stroke(Color.white, lineWidth: 4))
             .shadow(radius: 10)
     }
@@ -132,43 +132,4 @@ Skills:
             .multilineTextAlignment(.leading)
             .lineLimit(nil)
     }
-}
-
-private struct ViewHeightKey: PreferenceKey {
-    static var defaultValue: CGFloat { 0 }
-    static func reduce(value: inout Value, nextValue: () -> Value) {
-        value = value + nextValue()
-    }
-}
-
-struct SmartScrollView<Content: View>: View {
-    @State private var fitInScreen = false
-    @State var axes = Axis.Set.vertical
-    
-    let content: () -> Content
-    
-    var body: some View {
-        GeometryReader { gp in
-            ScrollView(axes) {
-                content()
-                    .onAppear {
-                        axes = fitInScreen ? [] : .vertical
-                    }
-                    
-                .background(GeometryReader {
-                    // calculate height by consumed background and store in
-                    // view preference
-                    Color.clear.preference(key: ViewHeightKey.self,
-                        value: $0.frame(in: .local).size.height) })
-                
-            }
-            .onPreferenceChange(ViewHeightKey.self) {
-                 self.fitInScreen = $0 < gp.size.height    // << here !!
-            }
-            
-           
-        }
-        
-    }
-    
 }

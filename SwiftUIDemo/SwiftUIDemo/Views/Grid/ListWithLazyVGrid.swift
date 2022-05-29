@@ -12,7 +12,6 @@ struct ListWithLazyVGrid: View {
     @State var gridLayout: [GridItem] = [ GridItem() ]
 
     var body: some View {
-        NavigationView {
             ScrollView {
                 LazyVGrid(columns: gridLayout, alignment: .center, spacing: 10) {
 
@@ -44,7 +43,6 @@ struct ListWithLazyVGrid: View {
                 }
             }
         }
-    }
 }
 
 struct Photo: Identifiable {

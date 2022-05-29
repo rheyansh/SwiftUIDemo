@@ -12,7 +12,6 @@ struct ComplexGridView2: View {
     @State var gridLayout = [ GridItem(.adaptive(minimum: 100)), GridItem(.flexible()) ]
 
     var body: some View {
-        NavigationView {
             ScrollView {
                 LazyVGrid(columns: gridLayout, alignment: .center, spacing: 10) {
 
@@ -45,7 +44,6 @@ struct ComplexGridView2: View {
             }
             .navigationTitle("Coffee Feed")
         }
-    }
 }
 
 struct ComplexGridView2_Previews: PreviewProvider {

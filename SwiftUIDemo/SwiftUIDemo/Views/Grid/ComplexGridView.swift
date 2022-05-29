@@ -12,7 +12,6 @@ struct ComplexGridView: View {
     @State var gridLayout = [ GridItem() ]
     
     var body: some View {
-        NavigationView {
             ScrollView {
                 LazyVGrid(columns: gridLayout, alignment: .center, spacing: 10) {
 
@@ -45,7 +44,6 @@ struct ComplexGridView: View {
             }
             .navigationTitle("Coffee Feed")
         }
-    }
 }
 
 struct Cafe: Identifiable {

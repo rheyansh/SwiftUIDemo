@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		112F2F3422DDF2F000075244 /* Tutor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 112F2F3322DDF2F000075244 /* Tutor.xcassets */; };
-		112F2F5722DDF30100075244 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112F2F3722DDF30100075244 /* FormView.swift */; };
-		112F2F5822DDF30100075244 /* FormRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112F2F3822DDF30100075244 /* FormRow.swift */; };
 		112F2F5922DDF30100075244 /* MenuListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112F2F3A22DDF30100075244 /* MenuListView.swift */; };
 		112F2F5A22DDF30100075244 /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112F2F3B22DDF30100075244 /* MenuRow.swift */; };
 		112F2F5B22DDF30100075244 /* MenuDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112F2F3C22DDF30100075244 /* MenuDetailView.swift */; };
@@ -90,6 +88,11 @@
 		68DF431C2842990A00FEB792 /* GridListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF431B2842990A00FEB792 /* GridListItem.swift */; };
 		68DF432028429F1800FEB792 /* ComplexGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF431F28429F1800FEB792 /* ComplexGridView.swift */; };
 		68DF432228429FE700FEB792 /* ComplexGridView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF432128429FE700FEB792 /* ComplexGridView2.swift */; };
+		68DF4324284311AA00FEB792 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF4323284311AA00FEB792 /* EditProfileView.swift */; };
+		68DF43262843162500FEB792 /* EditProfileRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF43252843162500FEB792 /* EditProfileRowView.swift */; };
+		68DF432828432AEA00FEB792 /* RPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF432728432AEA00FEB792 /* RPicker.swift */; };
+		68DF432A2843339D00FEB792 /* FKMediaPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF43292843339D00FEB792 /* FKMediaPicker.swift */; };
+		68DF432C284333DE00FEB792 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF432B284333DE00FEB792 /* AlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,8 +107,6 @@
 
 /* Begin PBXFileReference section */
 		112F2F3322DDF2F000075244 /* Tutor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Tutor.xcassets; sourceTree = "<group>"; };
-		112F2F3722DDF30100075244 /* FormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
-		112F2F3822DDF30100075244 /* FormRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormRow.swift; sourceTree = "<group>"; };
 		112F2F3A22DDF30100075244 /* MenuListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuListView.swift; sourceTree = "<group>"; };
 		112F2F3B22DDF30100075244 /* MenuRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
 		112F2F3C22DDF30100075244 /* MenuDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuDetailView.swift; sourceTree = "<group>"; };
@@ -190,6 +191,11 @@
 		68DF431B2842990A00FEB792 /* GridListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridListItem.swift; sourceTree = "<group>"; };
 		68DF431F28429F1800FEB792 /* ComplexGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexGridView.swift; sourceTree = "<group>"; };
 		68DF432128429FE700FEB792 /* ComplexGridView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexGridView2.swift; sourceTree = "<group>"; };
+		68DF4323284311AA00FEB792 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		68DF43252843162500FEB792 /* EditProfileRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileRowView.swift; sourceTree = "<group>"; };
+		68DF432728432AEA00FEB792 /* RPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPicker.swift; sourceTree = "<group>"; };
+		68DF43292843339D00FEB792 /* FKMediaPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FKMediaPicker.swift; sourceTree = "<group>"; };
+		68DF432B284333DE00FEB792 /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,7 +229,6 @@
 				11FCDCFC22DF225C0013FDB9 /* MVVMDemo */,
 				11EA161E22DE043500C799D2 /* List2Demo */,
 				112F2F6F22DDF71300075244 /* LoginDemo */,
-				112F2F3622DDF30100075244 /* FormExample */,
 				112F2F3922DDF30100075244 /* SimpleMenuList */,
 				112F2F3D22DDF30100075244 /* Others */,
 				112F2F3F22DDF30100075244 /* SearchRepo */,
@@ -231,15 +236,6 @@
 				112F2F4922DDF30100075244 /* SettingScreen */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		112F2F3622DDF30100075244 /* FormExample */ = {
-			isa = PBXGroup;
-			children = (
-				112F2F3722DDF30100075244 /* FormView.swift */,
-				112F2F3822DDF30100075244 /* FormRow.swift */,
-			);
-			path = FormExample;
 			sourceTree = "<group>";
 		};
 		112F2F3922DDF30100075244 /* SimpleMenuList */ = {
@@ -523,7 +519,12 @@
 		68AFC8E92841E0C100D3C03C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				68DF432728432AEA00FEB792 /* RPicker.swift */,
 				68AFC8EA2841E0C100D3C03C /* MyProfileView.swift */,
+				68DF4323284311AA00FEB792 /* EditProfileView.swift */,
+				68DF43252843162500FEB792 /* EditProfileRowView.swift */,
+				68DF43292843339D00FEB792 /* FKMediaPicker.swift */,
+				68DF432B284333DE00FEB792 /* AlertController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -674,10 +675,12 @@
 				11333F3E22E046E800ABBCFE /* Course.swift in Sources */,
 				68DF42C02842360E00FEB792 /* BulkDeleteListView.swift in Sources */,
 				112F2F5C22DDF30100075244 /* LandingView.swift in Sources */,
+				68DF43262843162500FEB792 /* EditProfileRowView.swift in Sources */,
 				11FCDCF922DEEAAD0013FDB9 /* FoodDetailView.swift in Sources */,
 				11FCDCFB22DEEB040013FDB9 /* FoodHelper.swift in Sources */,
 				68DF431A284298DD00FEB792 /* GridList.swift in Sources */,
 				112F2F6222DDF30100075244 /* TutorRowView.swift in Sources */,
+				68DF4324284311AA00FEB792 /* EditProfileView.swift in Sources */,
 				11FCDD0322DF22C10013FDB9 /* Repository.swift in Sources */,
 				11FCDD0522DF22D40013FDB9 /* User.swift in Sources */,
 				68DF42C7284295A300FEB792 /* ListWithLazyVGrid.swift in Sources */,
@@ -688,9 +691,9 @@
 				112F2F6322DDF30100075244 /* TutorListView.swift in Sources */,
 				11333F4422E0519900ABBCFE /* ImageLoader.swift in Sources */,
 				68AFC8F42842154700D3C03C /* GroupedListView.swift in Sources */,
-				112F2F5722DDF30100075244 /* FormView.swift in Sources */,
 				112F2F5A22DDF30100075244 /* MenuRow.swift in Sources */,
 				11FCDD1C22DF26220013FDB9 /* RepositoryListRow.swift in Sources */,
+				68DF432828432AEA00FEB792 /* RPicker.swift in Sources */,
 				11FCDD0722DF22F20013FDB9 /* AnySubscription.swift in Sources */,
 				115CD1A522DF3D1000791A86 /* PriceView.swift in Sources */,
 				112F2F6422DDF30100075244 /* TutorDetailView.swift in Sources */,
@@ -704,6 +707,7 @@
 				112F2F6022DDF30100075244 /* ServiceHelper.swift in Sources */,
 				11FCDD1A22DF26050013FDB9 /* RepositoryListView.swift in Sources */,
 				68DF432228429FE700FEB792 /* ComplexGridView2.swift in Sources */,
+				68DF432A2843339D00FEB792 /* FKMediaPicker.swift in Sources */,
 				115C17D222DF3A9A00262980 /* FoundationExtensions.swift in Sources */,
 				112F2F6622DDF30100075244 /* SettingsStore.swift in Sources */,
 				115C17DE22DF3B2800262980 /* SearchBookCell.swift in Sources */,
@@ -725,9 +729,9 @@
 				11FCDD1622DF25B40013FDB9 /* SearchRepositoryRequest.swift in Sources */,
 				11FCDD0122DF22AA0013FDB9 /* SearchRepositoryResponse.swift in Sources */,
 				68AFC8EB2841E0C100D3C03C /* MyProfileView.swift in Sources */,
+				68DF432C284333DE00FEB792 /* AlertController.swift in Sources */,
 				112F2F5F22DDF30100075244 /* ReposStore.swift in Sources */,
 				68DF42C22842362200FEB792 /* SwipeDeleteListView.swift in Sources */,
-				112F2F5822DDF30100075244 /* FormRow.swift in Sources */,
 				115C17DC22DF3B1500262980 /* SearchBookBar.swift in Sources */,
 				68AFC8E82841D6DB00D3C03C /* TabBarView.swift in Sources */,
 				115CD1A422DF3D1000791A86 /* DealView.swift in Sources */,
