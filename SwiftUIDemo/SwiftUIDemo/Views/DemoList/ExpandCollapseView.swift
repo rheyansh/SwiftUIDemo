@@ -14,6 +14,8 @@ struct ExpandCollapseView: View {
         List(authors, children: \.subItems) { rowItem in
             ItemView(item: rowItem)
         }
+        .navigationBarTitle(Text("Expand & Collapse"), displayMode: .inline)
+
     }
 }
 

@@ -15,7 +15,7 @@ struct ImagelistView : View {
     var body: some View {
         
         List(networkManager.courses, rowContent: CourseRow.init)
-            .navigationBarTitle("Courses")
+            .navigationBarTitle(Text("Image List"), displayMode: .inline)
     }
 }
 

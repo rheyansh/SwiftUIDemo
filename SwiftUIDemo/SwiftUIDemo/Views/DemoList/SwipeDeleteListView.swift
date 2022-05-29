@@ -27,6 +27,7 @@ struct SwipeDeleteListView: View {
                     deleteAction(indexSet)
                 })
             }
+            .navigationBarTitle(Text("Swipe Delete"), displayMode: .inline)
         }
         
         func deleteAction(_ index: IndexSet) {

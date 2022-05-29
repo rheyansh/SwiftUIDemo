@@ -35,6 +35,7 @@ struct GroupedListView: View {
                     }
                 }
             }
+            .navigationBarTitle(Text("Section List"), displayMode: .inline)
             .listStyle(InsetGroupedListStyle())
         }
 }

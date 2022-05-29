@@ -19,7 +19,6 @@ struct BulkDeleteListView: View {
         "Book 6"
     ]
     var body: some View {
-        NavigationView {
                 List {
                     ForEach (bookTitles, id: \.self) { title in
                         SwipeDeleteRowView(title: title)
@@ -28,9 +27,8 @@ struct BulkDeleteListView: View {
                         deleteAction(indexSet)
                     })
                 }
-                .navigationTitle("My Books")
+                .navigationBarTitle(Text("Bulk Delete"), displayMode: .inline)
                 .navigationBarItems(trailing: EditButton())
-            }
     }
     
     func deleteAction(_ index: IndexSet) {

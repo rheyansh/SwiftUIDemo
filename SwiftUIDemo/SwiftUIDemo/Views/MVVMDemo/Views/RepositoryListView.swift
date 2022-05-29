@@ -12,7 +12,6 @@ struct RepositoryListView : View {
     @ObservedObject var viewModel: RepositoryListViewModel
     
     var body: some View {
-        NavigationView {
             List(viewModel.output.repositories) { repository in
                 RepositoryListRow(repository: repository)
             }
@@ -20,7 +19,7 @@ struct RepositoryListView : View {
                 Alert(title: Text("Error"), message: Text(viewModel.output.errorMessage))
                     }
             .navigationBarTitle(Text("Repositories"))
-        }
+        
         .onAppear(perform: { self.viewModel.apply(.onAppear) })
     }
 }
