@@ -42,7 +42,6 @@ struct TabBarView : View {
             
             NavigationView {
                 MenuListView()
-                //FoodList()
             }
             .tabItem {
                 Image(systemName: "doc.text.fill")
@@ -51,14 +50,9 @@ struct TabBarView : View {
             .tag(TabItems.list.rawValue)
 
             NavigationView {
-                //SearchBookView()
-                //FormView()
                 GridList()
 
-                //ImagelistView()
                 //LandingView()
-                //DataStackView(deals: Deal.previewContent)
-                //RepositoryListView(viewModel: .init())
             }
             .tabItem {
                 Image(systemName: "video.circle.fill")

@@ -13,12 +13,16 @@ struct MenuListView : View {
     @State var items = [
         MenuItem(type: MenuListType.login),
         MenuItem(type: MenuListType.tutorList),
+        MenuItem(type: MenuListType.searchWithDebounce),
         MenuItem(type: MenuListType.localSearchDemo),
+        MenuItem(type: MenuListType.searchRepoWithMVVM),
         MenuItem(type: MenuListType.expandCollapse),
         MenuItem(type: MenuListType.simpleMenuList),
         MenuItem(type: MenuListType.groupedlist),
         MenuItem(type: MenuListType.swipeDeleteListView),
-        MenuItem(type: MenuListType.bulkDeleteListView)
+        MenuItem(type: MenuListType.bulkDeleteListView),
+        MenuItem(type: MenuListType.asyncImageLoad),
+        MenuItem(type: MenuListType.foodList)
     ]
     
     var body: some View {
@@ -30,6 +34,22 @@ struct MenuListView : View {
                     }
                 } else if item.type == .login {
                     NavigationLink(destination: LoginView()) {
+                        MenuRow(item: item)
+                    }
+                } else if item.type == .searchRepoWithMVVM {
+                    NavigationLink(destination: RepositoryListView(viewModel: .init())) {
+                        MenuRow(item: item)
+                    }
+                } else if item.type == .asyncImageLoad {
+                    NavigationLink(destination: ImagelistView()) {
+                        MenuRow(item: item)
+                    }
+                } else if item.type == .searchWithDebounce {
+                    NavigationLink(destination: SearchBookView()) {
+                        MenuRow(item: item)
+                    }
+                } else if item.type == .foodList {
+                    NavigationLink(destination: FoodList()) {
                         MenuRow(item: item)
                     }
                 } else if item.type == .tutorList {

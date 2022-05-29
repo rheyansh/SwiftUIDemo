@@ -32,7 +32,6 @@ struct TutorDetailView : View {
                 Spacer()
             }
         }
-        .padding(16)
         .navigationBarTitle(Text(name), displayMode: .inline)
     }
 }
@@ -46,6 +45,7 @@ struct TutorDetailImage: View {
             .frame(width: 160, height: 160)
             .overlay(Circle().stroke(Color.white, lineWidth: 4))
             .shadow(radius: 10)
+            .padding(.top, 20)
     }
 }
 

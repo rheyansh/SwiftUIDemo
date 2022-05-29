@@ -25,10 +25,3 @@ struct RepositoryListView : View {
     }
 }
 
-#if DEBUG
-struct RepositoryListView_Previews : PreviewProvider {
-    static var previews: some View {
-        RepositoryListView(viewModel: .init())
-    }
-}
-#endif

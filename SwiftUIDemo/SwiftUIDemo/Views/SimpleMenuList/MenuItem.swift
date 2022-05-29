@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 
 enum MenuListType {
-    case unknown, login, groupedlist, expandCollapse, swipeDeleteListView, bulkDeleteListView, simpleMenuList, localSearchDemo, tutorList
+    case unknown, login, groupedlist, expandCollapse, swipeDeleteListView, bulkDeleteListView, simpleMenuList, localSearchDemo, tutorList, searchRepoWithMVVM, foodList, asyncImageLoad, searchWithDebounce
 }
 
 class MenuItem: Identifiable {
@@ -57,6 +57,22 @@ class MenuItem: Identifiable {
         case .tutorList:
             self.title = "A Tutor List"
             self.subtitle = "attractive tutor list"
+
+        case .searchRepoWithMVVM:
+            self.title = "MVVM Demo"
+            self.subtitle = "search repo using MVVM and api call"
+            
+        case .asyncImageLoad:
+            self.title = "Async Image Loading"
+            self.subtitle = "load image from server asynchronously with placeholder image"
+
+        case .foodList:
+            self.title = "A Food List"
+            self.subtitle = "food list and it's details demo"
+
+        case .searchWithDebounce:
+            self.title = "Api Search using MVVM for Records from Server and Show Details"
+            self.subtitle = "MVVM, Google book api, search using debounce technique"
 
         case .unknown:
             self.title = "New Cell"

@@ -30,7 +30,6 @@ struct MyProfileView : View {
                 Spacer()
             }
         }
-        .padding(16)
         .navigationBarTitle(Text("My Profile"), displayMode: .inline)
         .navigationBarItems(
             trailing: NavigationLink(destination: EditProfileView()) {
@@ -48,6 +47,7 @@ struct MyProfileImage: View {
             .frame(width: 160, height: 160)
             .overlay(Circle().stroke(Color.white, lineWidth: 4))
             .shadow(radius: 10)
+            .padding(.top, 20)
     }
 }
 

@@ -11,7 +11,6 @@ import SwiftUI
 struct FoodList : View {
     
     var body: some View {
-        NavigationView {
             List {
                 NavigationLink(destination: FoodDetailView(currentCategory: .burger)) {
                     CategoryView(imageName: "burger", categoryName: "BURGER")
@@ -26,19 +25,9 @@ struct FoodList : View {
                     CategoryView(imageName: "cake", categoryName: "DESSERTS")
                 }
             }
-            .navigationBarTitle(Text("Food Delivery"))
+            .navigationBarTitle(Text("Food List"))
         }
-    }
 }
-
-
-#if DEBUG
-struct FoodList_Previews : PreviewProvider {
-    static var previews: some View {
-        FoodList()
-    }
-}
-#endif
 
 struct CategoryView : View {
     

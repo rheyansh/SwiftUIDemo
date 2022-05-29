@@ -12,7 +12,6 @@ struct SearchBookView : View {
     @ObservedObject private var viewModel = SearchBookViewModel()
     
     var body: some View {
-        NavigationView {
             VStack {
                 SearchBookBar(text: $viewModel.searchText)
                 List(viewModel.items) { item in
@@ -23,7 +22,6 @@ struct SearchBookView : View {
             }
             .navigationBarTitle(Text("Books Search"))
         }
-    }
 }
 
 #if DEBUG

@@ -14,10 +14,8 @@ struct ImagelistView : View {
     
     var body: some View {
         
-        NavigationView {
-             List(networkManager.courses, rowContent: CourseRow.init)
+        List(networkManager.courses, rowContent: CourseRow.init)
             .navigationBarTitle("Courses")
-        }
     }
 }
 

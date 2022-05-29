@@ -9,7 +9,7 @@
 import SwiftUI
 
 enum GridListType {
-    case unknown, listWithLazyVGrid, complexGrid, complexGrid2
+    case unknown, listWithLazyVGrid, complexGrid, complexGrid2, dataStack
 }
 
 class GridListItem: Identifiable {
@@ -33,6 +33,10 @@ class GridListItem: Identifiable {
         case .complexGrid2:
             self.title = "Another Complex Grid"
             self.subtitle = "cafe and coffee photos side by side, you can modify the gridLayout"
+
+        case .dataStack:
+            self.title = "Animated Data Stack View"
+            self.subtitle = "animated data stack with bounce effect"
 
         case .unknown:
             self.title = "New Cell"

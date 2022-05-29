@@ -13,19 +13,23 @@ struct GridList: View {
     @State var items = [
         GridListItem(type: GridListType.listWithLazyVGrid),
         GridListItem(type: GridListType.complexGrid),
-        GridListItem(type: GridListType.complexGrid2)
+        GridListItem(type: GridListType.complexGrid2),
+        GridListItem(type: GridListType.dataStack)
     ]
     
     var body: some View {
-        
-        return
-            List(items) { item in
+
+        return List(items) { item in
                 if item.type == .listWithLazyVGrid {
                     NavigationLink(destination: ListWithLazyVGrid()) {
                         GridListRowView(item: item)
                     }
                 } else if item.type == .complexGrid {
                     NavigationLink(destination: ComplexGridView()) {
+                        GridListRowView(item: item)
+                    }
+                } else if item.type == .dataStack {
+                    NavigationLink(destination: DataStackView(deals: Deal.previewContent)) {
                         GridListRowView(item: item)
                     }
                 } else if item.type == .complexGrid2 {
