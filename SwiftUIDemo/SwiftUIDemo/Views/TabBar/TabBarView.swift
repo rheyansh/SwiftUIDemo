@@ -17,7 +17,7 @@ let barBgColor = UIColor(red: 240/255.0, green: 243/255.0, blue: 244/255.0, alph
 
 struct TabBarView : View {
     @State private var selectedTab = TabItems.dashboard.rawValue
-
+    
     init() {
         
         let tabBarAppeareance = UITabBarAppearance()
@@ -30,9 +30,10 @@ struct TabBarView : View {
     
     var body: some View {
         return TabView(selection: $selectedTab) {
-
+            
             NavigationView() {
-                LoginView()
+                //LoginView()
+                LandingView()
             }
             .tabItem {
                 Image(systemName: "house.circle.fill")
@@ -48,18 +49,16 @@ struct TabBarView : View {
                 Text("List")
             }
             .tag(TabItems.list.rawValue)
-
+            
             NavigationView {
                 GridList()
-
-                //LandingView()
             }
             .tabItem {
                 Image(systemName: "video.circle.fill")
                 Text("Grid")
             }
             .tag(TabItems.grid.rawValue)
-
+            
             NavigationView {
                 MyProfileView()
             }
@@ -68,7 +67,7 @@ struct TabBarView : View {
                 Text("Profile")
             }
             .tag(TabItems.settings.rawValue)
-
+            
             SettingNavView()
         }
     }
@@ -91,7 +90,7 @@ struct SettingNavView : View {
 
 /*
  TabView {
-     ...
+ ...
  }
  .tabViewStyle(PageTabViewStyle())
  */

@@ -11,7 +11,7 @@ import SwiftUI
 struct LandingView : View {
     var body: some View {
         VStack {
-            Image("Simon Ng")
+            Image("header")
                 .resizable()
                 .frame(width: 200, height: 200)
                 .scaledToFill()
@@ -19,17 +19,18 @@ struct LandingView : View {
                     print("11")
                 })
                 .clipShape(Circle())
-                
+            
                 .overlay(
-Circle().stroke(Color.orange, lineWidth: 4)
+                    Circle().stroke(primaryColor, lineWidth: 4)
                 ).padding(.bottom, 50)
                 .shadow(radius: 10)
             
-            
-            
+            NavigationLink(destination: LoginView()) {
+                LoginButton()
+            }
             Divider()
             
-            Image("Simon Ng")
+            Image("cafe-10")
                 .resizable()
                 .frame(width: 200, height: 200)
                 .scaledToFill()
@@ -38,12 +39,39 @@ Circle().stroke(Color.orange, lineWidth: 4)
                 })
                 .clipShape(Circle())
                 .overlay(
-                    Circle().stroke(Color.orange, lineWidth: 4)
+                    Circle().stroke(primaryColor, lineWidth: 4)
                 ).padding(.top, 50)
                 .shadow(radius: 10)
-            }.padding()
+            
+            NavigationLink(destination: RegisterView()) {
+                RegisterButton()
+            }
+        }.padding()
     }
 }
+
+struct LoginButton: View {
+    var body: some View {
+        
+        return HStack() {
+            Text("Login")
+        }.padding(.bottom, 20)
+            .padding(.trailing, 20)
+            .font(.custom("Avenir-Bold", size: 27))
+    }
+}
+
+struct RegisterButton: View {
+    var body: some View {
+        
+        return HStack() {
+            Text("Register")
+        }.padding(.bottom, 20)
+            .padding(.trailing, 20)
+            .font(.custom("Avenir-Bold", size: 27))
+    }
+}
+
 
 #if DEBUG
 struct LandingView_Previews : PreviewProvider {

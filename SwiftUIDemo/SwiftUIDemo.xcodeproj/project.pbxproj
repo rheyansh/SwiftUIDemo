@@ -94,6 +94,7 @@
 		68DF432A2843339D00FEB792 /* FKMediaPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF43292843339D00FEB792 /* FKMediaPicker.swift */; };
 		68DF432C284333DE00FEB792 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF432B284333DE00FEB792 /* AlertController.swift */; };
 		68DF432F28433F1500FEB792 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF432E28433F1500FEB792 /* NavigationBarModifier.swift */; };
+		68DF433128434E4000FEB792 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF433028434E4000FEB792 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +199,7 @@
 		68DF43292843339D00FEB792 /* FKMediaPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FKMediaPicker.swift; sourceTree = "<group>"; };
 		68DF432B284333DE00FEB792 /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		68DF432E28433F1500FEB792 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
+		68DF433028434E4000FEB792 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				112F2F7022DDF73900075244 /* LoginView.swift */,
+				68DF433028434E4000FEB792 /* RegisterView.swift */,
 			);
 			path = LoginDemo;
 			sourceTree = "<group>";
@@ -737,6 +740,7 @@
 				11FCDD0D22DF24EA0013FDB9 /* RepositoryListViewModel.swift in Sources */,
 				11FCDCF522DEE9230013FDB9 /* Food.swift in Sources */,
 				112F2F5922DDF30100075244 /* MenuListView.swift in Sources */,
+				68DF433128434E4000FEB792 /* RegisterView.swift in Sources */,
 				68DF432F28433F1500FEB792 /* NavigationBarModifier.swift in Sources */,
 				11FCDD1622DF25B40013FDB9 /* SearchRepositoryRequest.swift in Sources */,
 				11FCDD0122DF22AA0013FDB9 /* SearchRepositoryResponse.swift in Sources */,
